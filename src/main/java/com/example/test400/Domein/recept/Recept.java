@@ -1,7 +1,6 @@
 package com.example.test400.Domein.recept;
 
 import java.util.ArrayList;
-
 public class Recept {
     private String naam;
     private int energie;

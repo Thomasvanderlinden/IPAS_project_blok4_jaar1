@@ -1,7 +1,6 @@
 package com.example.test400.Domein.supplement;
 
 import java.util.ArrayList;
-
 public class IngredientenSupplement {
     private String naam;
     private int hoeveelheid;
@@ -10,6 +9,7 @@ public class IngredientenSupplement {
         this.naam = naam;
         this.hoeveelheid = hoeveelheid;
     }
+
 
 
     public String getNaam() {

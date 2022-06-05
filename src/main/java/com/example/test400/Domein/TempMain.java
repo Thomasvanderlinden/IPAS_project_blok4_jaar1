@@ -48,13 +48,12 @@ public class TempMain {
 
         //supplement 2
         ArrayList<IngredientenSupplement> ingredientenWHEY = new ArrayList<>();
-        ingredientenCREA.add(new IngredientenSupplement("weiproteineconcentraat(milk)", 200));
-        ingredientenCREA.add(new IngredientenSupplement("smaakstoffen", 10));
-        ingredientenCREA.add(new IngredientenSupplement("verdikkingsmiddel", 100));
-        ingredientenCREA.add(new IngredientenSupplement("zonnebloem lecthine", 70));
-        ingredientenCREA.add(new IngredientenSupplement("zoetstof", 20));
+        ingredientenWHEY.add(new IngredientenSupplement("weiproteineconcentraat(milk)", 200));
+        ingredientenWHEY.add(new IngredientenSupplement("smaakstoffen", 10));
+        ingredientenWHEY.add(new IngredientenSupplement("verdikkingsmiddel", 100));
+        ingredientenWHEY.add(new IngredientenSupplement("zonnebloem lecthine", 70));
+        ingredientenWHEY.add(new IngredientenSupplement("zoetstof", 20));
         Supplement s2 = new Supplement("Eiwitpoeder (Whey)", 380, 30, 39, ingredientenWHEY);
-
 
 //een nieuwe oefening maken:
         Oefening o1 = new Oefening("bankdrukken", 10, 300, "borst");

@@ -2,7 +2,6 @@ package com.example.test400.Domein.supplement;
 
 import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
-
 public class Supplement {
     private String naam;
     private int koolhydraten;

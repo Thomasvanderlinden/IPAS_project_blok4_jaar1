@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class Recept {
     private String naam;
+    private int energie;
     private int koolhydraten;
     private int eiwitten;
     private int vetten;
     private ArrayList<IngredientenRecept> ingredienten = new ArrayList<>();
 
-    public Recept(String naam, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts){
+    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts){
         this.naam = naam;
+        this.energie = energie;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
         this.vetten = vetten;

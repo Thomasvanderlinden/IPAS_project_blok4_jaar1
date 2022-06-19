@@ -75,6 +75,11 @@ public class StartupListener implements ServletContextListener {
         oefeningen.add(o3);
         Oefening o4 = new Oefening("rope-pulldown", 10, 25, "tricep");
         oefeningen.add(o4);
+        Oefening o5 = new Oefening("incline-bankdrukken", 10, 105, "bovenkant-borst");
+        oefeningen.add(o5);
+        oefeningen.add(new Oefening("lat-pulldown", 10, 139, "rug"));
+        oefeningen.add(new Oefening("squad", 30, 32, "bovenbeen"));
+        oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten"));
 
 //tips maken:
         Tips t1 = new Tips("tipnaam", "ondewerp", "tekstvandetip", "auteur");

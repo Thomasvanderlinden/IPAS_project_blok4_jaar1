@@ -14,33 +14,25 @@ public class Oefening {
     }
 
 
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
+
 
     public int getTijd() {
         return tijd;
     }
 
-    public void setTijd(int tijd) {
-        this.tijd = tijd;
-    }
+
 
     public int getVerbrande_kcal() {
         return verbrande_kcal;
     }
 
-    public void setVerbrande_kcal(int verbrande_kcal) {
-        this.verbrande_kcal = verbrande_kcal;
-    }
+
 
     public String getSpiergroep() {
         return spiergroep;
     }
 
-    public void setSpiergroep(String spiergroep) {
-        this.spiergroep = spiergroep;
-    }
+
 
     public String getNaam(){
         return this.naam;

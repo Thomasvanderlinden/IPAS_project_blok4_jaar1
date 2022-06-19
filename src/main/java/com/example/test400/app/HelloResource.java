@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import java.util.List;
 
 import static com.example.test400.app.StartupListener.supplementen;
-@Path("/homepage")
+@Path("/oefeningen")
 public class HelloResource {
     @GET
     @Produces("application/json")

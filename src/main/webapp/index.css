@@ -1,3 +1,35 @@
+.oefenContainer{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto auto 1fr auto auto auto;
+
+    gap: 24px;
+}
+
+
+.itemHeader{
+    border-style: solid;
+    grid-column: 1/span 12;
+}
+.itemNavigation{
+    border-style: solid;
+    grid-column:  1/span 12;;
+}
+.itemMain{
+    border-style: solid;
+    grid-column: 4/span 9;
+}
+
+.itemSidebar{
+    border-style: solid;
+    grid-column: 1/4;
+    grid-row: 3;
+}
+.ItemFooter {
+    border-style: solid;
+    grid-column: 1/span 12;
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;

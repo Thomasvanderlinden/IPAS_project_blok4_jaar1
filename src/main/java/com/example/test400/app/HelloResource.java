@@ -13,7 +13,6 @@ import static com.example.test400.app.StartupListener.supplementen;
 public class HelloResource {
     @GET
     @Produces("application/json")
-    @Path("oefeningen")
     public List<Oefening> laatOefeningenZien(){
         return StartupListener.oefeningen;
     }

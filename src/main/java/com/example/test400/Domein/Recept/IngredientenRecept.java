@@ -1,15 +1,13 @@
-package com.example.test400.Domein.supplement;
+package com.example.test400.Domein.Recept;
 
-import java.util.ArrayList;
-public class IngredientenSupplement {
+public class IngredientenRecept {
     private String naam;
     private int hoeveelheid;
 
-    public IngredientenSupplement(String naam, int hoeveelheid) {
+    public IngredientenRecept(String naam, int hoeveelheid){
         this.naam = naam;
         this.hoeveelheid = hoeveelheid;
     }
-
 
 
     public String getNaam() {
@@ -33,3 +31,4 @@ public class IngredientenSupplement {
         return naam + ": " + hoeveelheid;
     }
 }
+

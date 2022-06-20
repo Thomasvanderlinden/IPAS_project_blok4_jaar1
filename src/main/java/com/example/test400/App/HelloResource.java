@@ -1,14 +1,13 @@
-package com.example.test400.app;
+package com.example.test400.App;
 
 import com.example.test400.Domein.Oefening;
-import com.example.test400.Domein.supplement.Supplement;
+import com.example.test400.Domein.Supplement.Supplement;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import java.util.List;
 
-import static com.example.test400.app.StartupListener.supplementen;
 @Path("/oefeningen")
 public class HelloResource {
     @GET

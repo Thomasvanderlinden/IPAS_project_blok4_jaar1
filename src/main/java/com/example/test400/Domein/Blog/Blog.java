@@ -1,4 +1,4 @@
-package com.example.test400.Domein.blog;
+package com.example.test400.Domein.Blog;
 
 public class Blog {
     private Mening mening;

@@ -1,22 +1,21 @@
-package com.example.test400.Domein.recept;
+package com.example.test400.Domein.Supplement;
 
 import java.util.ArrayList;
-public class Recept {
+public class Supplement {
     private String naam;
-    private int energie;
     private int koolhydraten;
     private int eiwitten;
     private int vetten;
-    private ArrayList<IngredientenRecept> ingredienten = new ArrayList<>();
+    private ArrayList<IngredientenSupplement> ingredientenSupplement;
 
-    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts){
+    public Supplement(String naam, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenSupplement> ingredientenSupplements) {
         this.naam = naam;
-        this.energie = energie;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
         this.vetten = vetten;
-        this.ingredienten = ingredientenRecepts;
+        this.ingredientenSupplement = ingredientenSupplements;
     }
+
 
 
     public String getNaam() {
@@ -26,6 +25,7 @@ public class Recept {
     public void setNaam(String naam) {
         this.naam = naam;
     }
+
 
     public int getKoolhydraten() {
         return koolhydraten;
@@ -43,12 +43,14 @@ public class Recept {
         this.eiwitten = eiwitten;
     }
 
-    public int getVetten() {
-        return vetten;
+    public ArrayList<IngredientenSupplement> getIngredientenSupplement() {
+        return ingredientenSupplement;
     }
 
-    public ArrayList<IngredientenRecept> getIngredienten() {
-        return ingredienten;
+
+
+    public int getVetten() {
+        return vetten;
     }
 
     public void setVetten(int vetten) {

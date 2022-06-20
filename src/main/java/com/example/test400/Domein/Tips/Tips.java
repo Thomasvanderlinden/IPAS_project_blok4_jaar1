@@ -1,4 +1,4 @@
-package com.example.test400.Domein;
+package com.example.test400.Domein.Tips;
 
 public class Tips {
     private String tipnaam;

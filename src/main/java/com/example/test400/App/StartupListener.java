@@ -1,21 +1,17 @@
-package com.example.test400.app;
+package com.example.test400.App;
 
 import com.example.test400.Domein.Oefening;
-import com.example.test400.Domein.Tips;
-import com.example.test400.Domein.blog.Blog;
-import com.example.test400.Domein.blog.Mening;
-import com.example.test400.Domein.recept.IngredientenRecept;
-import com.example.test400.Domein.recept.Recept;
-import com.example.test400.Domein.supplement.IngredientenSupplement;
-import com.example.test400.Domein.supplement.Supplement;
+import com.example.test400.Domein.Tips.Tips;
+import com.example.test400.Domein.Blog.Blog;
+import com.example.test400.Domein.Blog.Mening;
+import com.example.test400.Domein.Recept.IngredientenRecept;
+import com.example.test400.Domein.Recept.Recept;
+import com.example.test400.Domein.Supplement.IngredientenSupplement;
+import com.example.test400.Domein.Supplement.Supplement;
 
-import javax.security.auth.message.config.ServerAuthContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import javax.swing.*;
-import java.net.ServerSocket;
-import java.rmi.server.ServerCloneException;
 import java.util.ArrayList;
 
 @WebListener

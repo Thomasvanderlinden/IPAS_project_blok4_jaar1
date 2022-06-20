@@ -1,22 +1,22 @@
-package com.example.test400.Domein.supplement;
+package com.example.test400.Domein.Recept;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
-public class Supplement {
+public class Recept {
     private String naam;
+    private int energie;
     private int koolhydraten;
     private int eiwitten;
     private int vetten;
-    private ArrayList<IngredientenSupplement> ingredientenSupplement;
+    private ArrayList<IngredientenRecept> ingredienten = new ArrayList<>();
 
-    public Supplement(String naam, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenSupplement> ingredientenSupplements) {
+    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts){
         this.naam = naam;
+        this.energie = energie;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
         this.vetten = vetten;
-        this.ingredientenSupplement = ingredientenSupplements;
+        this.ingredienten = ingredientenRecepts;
     }
-
 
 
     public String getNaam() {
@@ -26,7 +26,6 @@ public class Supplement {
     public void setNaam(String naam) {
         this.naam = naam;
     }
-
 
     public int getKoolhydraten() {
         return koolhydraten;
@@ -44,14 +43,12 @@ public class Supplement {
         this.eiwitten = eiwitten;
     }
 
-    public ArrayList<IngredientenSupplement> getIngredientenSupplement() {
-        return ingredientenSupplement;
-    }
-
-
-
     public int getVetten() {
         return vetten;
+    }
+
+    public ArrayList<IngredientenRecept> getIngredienten() {
+        return ingredienten;
     }
 
     public void setVetten(int vetten) {

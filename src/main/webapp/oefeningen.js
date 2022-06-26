@@ -1,16 +1,16 @@
 function vraagOefeningeOp(){
-    return fetch('http://localhost:8080/website/oefeningen')
+    return fetch('http://localhost:8080/restservices/oefeningen')
         .then(function (data){return data.json()})
         .then(function (info){return info})
 }
 
 
-let lijstje = document.getElementById('proefLijst')
+let lijstje = document.getElementById('proeflijst')
 
 vraagOefeningeOp().then(oefeningen => {
     lijstje.innerHTML = '';
     for(let o of oefeningen){
-        lijstje.innerHTML += `<li>${o.naam}</li>`  + "tijd: " + o.tijd
+        lijstje.innerHTML += `<div class="o.naam"><li>${o.naam}</li></div>`  + "tijd: " + o.tijd
 
     }
 

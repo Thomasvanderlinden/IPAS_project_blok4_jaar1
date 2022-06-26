@@ -1,17 +1,14 @@
 package com.example.test400.Domein.Blog;
 
+import java.util.ArrayList;
+
 public class Blog {
-    private Mening mening;
+    private ArrayList<Mening> magniet = new ArrayList<>();
 
-    public Blog(Mening mening){
-        this.mening = mening;
+    public Blog(ArrayList<Mening> magniet){
+        this.magniet = magniet;
     }
-
-    public Mening getMening() {
-        return mening;
-    }
-
-    public void setMening(Mening mening) {
-        this.mening = mening;
+    public ArrayList<Mening> getBlog(){
+        return magniet;
     }
 }

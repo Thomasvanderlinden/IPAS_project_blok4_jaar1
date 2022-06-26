@@ -62,18 +62,13 @@ h1{
     color: navy;
     font-size: 60px;
 }
-.artikel1{
+.oefeningen{
     border-style: dashed;
-    width: 250px;
+    width: 200px;
+    height: 250px;
     alignment: right;
     float: left;
 }
 
 
-.artikel2{
-    border-style: dashed;
-    width: 250px;
-    alignment: right;
-    float: right;
-}
 

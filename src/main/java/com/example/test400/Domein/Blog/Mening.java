@@ -10,6 +10,7 @@ public class Mening {
         this.onderwerp = onderwerp;
         this.tekst = tekst;
     }
+    public Mening(){}
 
     public String getNaam() {
         return naam;

@@ -4,6 +4,6 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 
-@ApplicationPath("/website")
+@ApplicationPath("/restservices")
 public class JerseyConfig extends Application {
 }

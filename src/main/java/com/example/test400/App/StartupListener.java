@@ -19,9 +19,10 @@ public class StartupListener implements ServletContextListener {
 
     public static ArrayList<Oefening> oefeningen = new ArrayList<>();
     public static ArrayList<Supplement> supplementen = new ArrayList<>();
+    public static ArrayList<Mening> blogDingen = new ArrayList<>();
 
 
-    public void contextInitialized(ServletContextEvent sce){
+    public void contextInitialized(ServletContextEvent sce) {
         //recept 1
         ArrayList<IngredientenRecept> ingredientenPO = new ArrayList<>();
         ingredientenPO.add(new IngredientenRecept("volkoren penne pasta", 300));
@@ -30,7 +31,7 @@ public class StartupListener implements ServletContextListener {
         ingredientenPO.add(new IngredientenRecept("gepelde tomaten", 800));
         ingredientenPO.add(new IngredientenRecept("besciamella", 400));
         ingredientenPO.add(new IngredientenRecept("broccoli", 750));
-        Recept R1 = new Recept("Pasta-ovenschotel met broccoli",892, 62, 50, 46, ingredientenPO);
+        Recept R1 = new Recept("Pasta-ovenschotel met broccoli", 892, 62, 50, 46, ingredientenPO);
 
         //recept 2
         ArrayList<IngredientenRecept> ingredientenOGCG = new ArrayList<>();
@@ -42,13 +43,13 @@ public class StartupListener implements ServletContextListener {
         ingredientenOGCG.add(new IngredientenRecept("bosui", 2));
         ingredientenOGCG.add(new IngredientenRecept("rode ui", 1));
         ingredientenOGCG.add(new IngredientenRecept("stokbrood", 1));
-        Recept R2 = new Recept("Pasta-ovenschotel met broccoli",892, 62, 50, 46, ingredientenOGCG);
+        Recept R2 = new Recept("Pasta-ovenschotel met broccoli", 892, 62, 50, 46, ingredientenOGCG);
 
 
 //een nieuw supplement aanmaken:
 
         //supplement 1
-        ArrayList <IngredientenSupplement> ingredientenCREA = new ArrayList<>();
+        ArrayList<IngredientenSupplement> ingredientenCREA = new ArrayList<>();
         ingredientenCREA.add(new IngredientenSupplement("creatine Monohydraat", 500));
         Supplement s1 = new Supplement("creatine", 300, 33, 66, ingredientenCREA);
         supplementen.add(s1);
@@ -82,8 +83,8 @@ public class StartupListener implements ServletContextListener {
 
 
 //mening maken:
-        Mening m1 = new Mening("naam", "onderwerp", "tekst");
-        Blog b1 = new Blog(m1);
+        blogDingen.add(new Mening("Artikel 1", "informatie die niet boeit", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
+        blogDingen.add(new Mening("Artikel 2", "dit is iets anders man", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
 
 
     }

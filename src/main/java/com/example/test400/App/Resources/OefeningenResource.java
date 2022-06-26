@@ -1,5 +1,6 @@
-package com.example.test400.App;
+package com.example.test400.App.Resources;
 
+import com.example.test400.App.StartupListener;
 import com.example.test400.Domein.Oefening;
 import com.example.test400.Domein.Supplement.Supplement;
 
@@ -9,7 +10,7 @@ import javax.ws.rs.Produces;
 import java.util.List;
 
 @Path("/oefeningen")
-public class HelloResource {
+public class OefeningenResource {
     @GET
     @Produces("application/json")
     public List<Oefening> laatOefeningenZien(){

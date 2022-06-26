@@ -13,6 +13,8 @@ public class Tips {
         this.auteur = auteur;
     }
 
+    public Tips(){}
+
     public String getTipnaam() {
         return tipnaam;
     }

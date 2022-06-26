@@ -19,7 +19,7 @@ haalBlogOp().then(x => {
 
 
 
-let knop = document.getElementById('opsturen')
+let knop = document.getElementById('opsturenBlog')
 let formulier = document.querySelector('#artikelForumuler')
 
 

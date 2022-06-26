@@ -20,7 +20,7 @@ public class StartupListener implements ServletContextListener {
     public static ArrayList<Supplement> supplementen = new ArrayList<>();
     public static ArrayList<Mening> blogArtikelen = new ArrayList<>();
     public static ArrayList<Recept> recepten = new ArrayList<>();
-
+    public static ArrayList<Tips> tipsTricks = new ArrayList<>();
 
     public void contextInitialized(ServletContextEvent sce) {
         //recept 1
@@ -80,8 +80,12 @@ public class StartupListener implements ServletContextListener {
         oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten", "omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png"));
 
 //tips maken:
-        Tips t1 = new Tips("tipnaam", "ondewerp", "tekstvandetip", "auteur");
-
+        Tips t1 = new Tips("tipnaam1", "ondewerp1", "tekstvandetip1", "auteur1");
+        Tips t2 = new Tips("tipnaam2", "ondewerp2", "tekstvandetip2", "auteur2");
+        Tips t3 = new Tips("tipnaam3", "ondewerp3", "tekstvandetip3", "auteur3");
+        tipsTricks.add(t1);
+        tipsTricks.add(t2);
+        tipsTricks.add(t3);
 
 //mening maken:
         blogArtikelen.add(new Mening("Artikel 1", "informatie die niet boeit", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));

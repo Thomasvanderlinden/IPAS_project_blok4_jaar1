@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://java.sun.com/jsf/facelets">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="tipsTricks.css">
 </head>
 
 <body>
 <div class="oefenContainer">
-
     <div class="itemHeader">
         <h1>WeGoGym</h1>
     </div>
@@ -26,41 +25,31 @@
     </div>
 
 
-
     <div class="itemMain">
-        <ul id="mijnLijst">
-        </ul>
-
-
-
-    </div>
-
-    <div class="itemSidebar" id="itemSidebar">
-        <ul> filters:
-            <li>mannen</li>
-            <li>vrouwen</li>
-            <li>kinderen</li>
-        </ul>
+        <ul id="tipsTricksLijst"></ul>
     </div>
 
 
+    <div class="itemSidebar"></div>
     <div class="ItemFooter">
-
-        <form id="artikelForumuler">
+        <form id="tipFormulier">
             <ul>
-                <li><input type="text" name="naam" id="field1"  placeholder="naam" ></li>
+                <li><input type="text" name="tipnaam" id="naamVeld"  placeholder="titel" ></li>
 
-                <li><input type="text" name="onderwerp" id="field2"  placeholder="onderwerp" ></li>
+                <li><input type="text" name="onderwerp" id="onderwerpVeld"  placeholder="onderwerp" ></li>
 
-                <li><textarea name="tekst" id="field3" placeholder="tekst" rows="4" cols="50" ></textarea></li>
+                <li><textarea id="tekst" name="tekstVanDeTip" placeholder="tekst" rows="4" cols="50" ></textarea></li>
 
-                <li><button id="opsturenBlog" value="Send Message">verstuur</button></li>
+                <li><input type="text" name="auteur" id="auteurVeld"  placeholder="auteur" ></li>
+
+                <li><button id="opsturenTip" value="Send Message">verstuur</button></li>
             </ul>
         </form>
 
     </div>
 
 </div>
-<script src="blog.js"></script>
+
+<script src="tipsTricks.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ import java.util.List;
 public class OefeningenResource {
     @GET
     @Produces("application/json")
-    public List<Oefening> laatOefeningenZien(){
+    public List<Oefening> opvragenOefening(){
         return StartupListener.oefeningen;
     }
 

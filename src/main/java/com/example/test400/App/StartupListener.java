@@ -2,7 +2,6 @@ package com.example.test400.App;
 
 import com.example.test400.Domein.Oefening;
 import com.example.test400.Domein.Tips.Tips;
-import com.example.test400.Domein.Blog.Blog;
 import com.example.test400.Domein.Blog.Mening;
 import com.example.test400.Domein.Recept.IngredientenRecept;
 import com.example.test400.Domein.Recept.Recept;
@@ -19,7 +18,8 @@ public class StartupListener implements ServletContextListener {
 
     public static ArrayList<Oefening> oefeningen = new ArrayList<>();
     public static ArrayList<Supplement> supplementen = new ArrayList<>();
-    public static ArrayList<Mening> blogDingen = new ArrayList<>();
+    public static ArrayList<Mening> blogArtikelen = new ArrayList<>();
+    public static ArrayList<Recept> recepten = new ArrayList<>();
 
 
     public void contextInitialized(ServletContextEvent sce) {
@@ -31,8 +31,7 @@ public class StartupListener implements ServletContextListener {
         ingredientenPO.add(new IngredientenRecept("gepelde tomaten", 800));
         ingredientenPO.add(new IngredientenRecept("besciamella", 400));
         ingredientenPO.add(new IngredientenRecept("broccoli", 750));
-        Recept R1 = new Recept("Pasta-ovenschotel met broccoli", 892, 62, 50, 46, ingredientenPO);
-
+        Recept r1 = new Recept("Pasta-ovenschotel met broccoli", 892, 62, 50, 46, ingredientenPO, "Een heerlijke pastaschotel uit de oven met lekker veel groente in de vorm van broccoli, doperwtjes en een romige saus.", "https://miljuschka.nl/wp-content/uploads/2021/02/Pasta-ovenschotel-met-broccoli-2.jpg" );
         //recept 2
         ArrayList<IngredientenRecept> ingredientenOGCG = new ArrayList<>();
         ingredientenOGCG.add(new IngredientenRecept("kruidenpasta", 70));
@@ -43,8 +42,10 @@ public class StartupListener implements ServletContextListener {
         ingredientenOGCG.add(new IngredientenRecept("bosui", 2));
         ingredientenOGCG.add(new IngredientenRecept("rode ui", 1));
         ingredientenOGCG.add(new IngredientenRecept("stokbrood", 1));
-        Recept R2 = new Recept("Pasta-ovenschotel met broccoli", 892, 62, 50, 46, ingredientenOGCG);
+        Recept r2 = new Recept("spaanse curry", 892, 62, 50, 46, ingredientenOGCG, "Deze Thaise rode currypasta is echt heet! Als je deze currypasta gaat maken kun je voor de hoeveelheid pepers het beste uitgaan van wat je normaal verdraag", "https://d1mlbwr23caxox.cloudfront.net/public/sites/default/files/styles/medium/public/recipe-images/Thai_Red_Curry_Paste_0.jpg?VersionId=1ppamqgdDxKgoZaZsFZacwdW74clVLv7&itok=iMvVf5bw");
 
+        recepten.add(r1);
+        recepten.add(r2);
 
 //een nieuw supplement aanmaken:
 
@@ -83,8 +84,8 @@ public class StartupListener implements ServletContextListener {
 
 
 //mening maken:
-        blogDingen.add(new Mening("Artikel 1", "informatie die niet boeit", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
-        blogDingen.add(new Mening("Artikel 2", "dit is iets anders man", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
+        blogArtikelen.add(new Mening("Artikel 1", "informatie die niet boeit", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
+        blogArtikelen.add(new Mening("Artikel 2", "dit is iets anders man", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
 
 
     }

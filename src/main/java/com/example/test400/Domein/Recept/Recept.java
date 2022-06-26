@@ -8,16 +8,31 @@ public class Recept {
     private int eiwitten;
     private int vetten;
     private ArrayList<IngredientenRecept> ingredienten = new ArrayList<>();
+    private String omschrijving;
+    private String plaatje;
 
-    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts){
+    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts, String omschrijving, String plaatje){
         this.naam = naam;
         this.energie = energie;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
         this.vetten = vetten;
         this.ingredienten = ingredientenRecepts;
+        this.omschrijving = omschrijving;
+        this.plaatje = plaatje;
     }
 
+    public int getEnergie() {
+        return energie;
+    }
+
+    public String getPlaatje() {
+        return plaatje;
+    }
+
+    public String getOmschrijving() {
+        return omschrijving;
+    }
 
     public String getNaam() {
         return naam;

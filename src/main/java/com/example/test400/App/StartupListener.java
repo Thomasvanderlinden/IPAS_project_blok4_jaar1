@@ -64,19 +64,19 @@ public class StartupListener implements ServletContextListener {
         supplementen.add(s2);
 
 //een nieuwe oefening maken:
-        Oefening o1 = new Oefening("bankdrukken", 10, 300, "borst");
+        Oefening o1 = new Oefening("bankdrukken", 10, 300, "borst","bankdrukken omschrijving", "https://upload.wikimedia.org/wikipedia/commons/8/86/Incline-bench-press-1.png");
         oefeningen.add(o1);
-        Oefening o2 = new Oefening("fly's", 15, 300, "borst");
+        Oefening o2 = new Oefening("fly's", 15, 300, "borst", "fly omschrijving", "https://i.pinimg.com/474x/89/d4/92/89d492813187786c6e293d2c4b1a99e1--chest-routine-kylie-jenner.jpg");
         oefeningen.add(o2);
-        Oefening o3 = new Oefening("bicep-curl", 10, 75, "bicep");
+        Oefening o3 = new Oefening("bicep-curl", 10, 75, "bicep","bicep curl omschrijving", "https://www.pinclipart.com/picdir/middle/413-4137921_biceps-drawing-mans-arm-dumbbell-curl-png-clipart.png");
         oefeningen.add(o3);
-        Oefening o4 = new Oefening("rope-pulldown", 10, 25, "tricep");
+        Oefening o4 = new Oefening("rope-pulldown", 10, 25, "tricep","omschrijving", "https://s3.amazonaws.com/prod.skimble/assets/770049/image_iphone.jpg");
         oefeningen.add(o4);
-        Oefening o5 = new Oefening("incline-bankdrukken", 10, 105, "bovenkant-borst");
+        Oefening o5 = new Oefening("incline-bench", 10, 105, "bovenkant-borst","omschrijving", "https://static.gymhero.me/everkinetics/incline_shoulder_press_dumbbell-small-frame_1.png");
         oefeningen.add(o5);
-        oefeningen.add(new Oefening("lat-pulldown", 10, 139, "rug"));
-        oefeningen.add(new Oefening("squad", 30, 32, "bovenbeen"));
-        oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten"));
+        oefeningen.add(new Oefening("lat-pulldown", 10, 139, "rug","omschrijving", "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Wide-Grip_Lat_Pulldown_F_WorkoutLabs.png"));
+        oefeningen.add(new Oefening("squad", 30, 32, "bovenbeen","omschrijving", "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.svg"));
+        oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten","omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png"));
 
 //tips maken:
         Tips t1 = new Tips("tipnaam", "ondewerp", "tekstvandetip", "auteur");

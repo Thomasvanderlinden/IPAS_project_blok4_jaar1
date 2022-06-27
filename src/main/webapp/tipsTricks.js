@@ -16,13 +16,12 @@ vraagTipsTricksOp().then(tips => {
     for (let t of tips) {
         lijstje.innerHTML += `<div class="oefeningen">
                                    <h2>${t.tipnaam}</h2>
-                                   <p>${t.tekstVanDeTip}</p> 
+                                   <h3>${t.onderwerp}</h3>
+                                   <p>${t.tekstVanDeTip}</p>
+                                   <h4>${t.auteur}</h4> 
                               </div>`
     }
 })
-
-
-
 
 
 

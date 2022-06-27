@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="schema.css">
+</head>
+
+<body>
+<div class="oefenContainer">
+    <div class="itemHeader">
+        <h1>WeGoGym</h1>
+    </div>
+
+    <!--moet nog toevoegen dat wanneer je op een pagina bent, die pagina in het menu een kleurtje krijgt -->
+    <div class="itemNavigation">
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="oefeningen.html">Oefeningen</a>
+            <a href="voeding.html">Voeding</a>
+            <a href="supplementen.html">Supplementen</a>
+            <a href="tipsTricks.html">Tips & Tricks</a>
+            <a href="blog.html">Blog</a>
+            <a href="schema.html"> Schema</a>
+
+        </div>
+    </div>
+
+
+    <div class="itemMain">
+
+        <button id="gainMuscleMassButton"><img src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FTZ7ay83uZTnqJtzPOb14y%2Fimages%2Fbody-muscles%2FHERO.png&w=128&q=75"></button>
+        <button id="loseWeightButton"><img src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FTZ7ay83uZTnqJtzPOb14y%2Fimages%2Fbody-muscles%2FSLIM_SHREDDED_BODY.png&w=128&q=75"></button>
+        <button id="shredButton"><img src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FTZ7ay83uZTnqJtzPOb14y%2Fimages%2Fbody-muscles%2FBEACH_BODY.png&w=128&q=75"></button>
+
+<!--        <button id="myBtn">Open Modal</button>-->
+
+        <div id="myModalShredded" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Je hebt gekozen voor SHREDDED</h1>
+                <table>
+                    <tr>
+                        <th>Oefening</th>
+                        <th>Sets</th>
+                        <th>Herhalingen</th>
+                        <th>Rust</th>
+                    </tr>
+                    <tr name="bankdrukken">
+                        <td>
+                            <select id="bankdrukken">
+                                <option>bankdrukken</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="incline">
+                        <td>
+                            <select>
+                                <option>incline bench</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="deadlift">
+                        <td>
+                            <select>
+                                <option>deadlift</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>2 min</td>
+                    </tr>
+                </table>
+                <button id="knopShredded">aanpassen</button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="itemSidebar">
+
+    </div>
+    <div class="ItemFooter"> footer</div>
+
+</div>
+
+<script src="schema.js"></script>
+</body>
+</html>

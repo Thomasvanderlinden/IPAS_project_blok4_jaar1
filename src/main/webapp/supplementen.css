@@ -25,6 +25,10 @@
     grid-column: 1/4;
     grid-row: 3;
 }
+.itemSidebar{
+    position: relative;
+    width: 200px;
+}
 .ItemFooter {
     border-style: solid;
     grid-column: 1/span 12;
@@ -69,4 +73,10 @@ h2{
 }
 p{
     font-weight: bold;
+}
+.itemHeader{
+    background-color: lightgrey;
+}
+.itemMain{
+    background-color: lightgrey;
 }

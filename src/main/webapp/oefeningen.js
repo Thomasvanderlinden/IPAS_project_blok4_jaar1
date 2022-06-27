@@ -17,7 +17,8 @@ vraagOefeningeOp().then(oefeningen => {
         lijstje.innerHTML += `<div class="oefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
-                                   <img src="${o.plaatje}" width="130px" height="110px"> 
+                                   <img src="${o.plaatje}" width="130px" height="110px">
+                                    
                               </div>`
     }
 })

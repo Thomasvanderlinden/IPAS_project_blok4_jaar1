@@ -6,4 +6,5 @@ import javax.ws.rs.core.Application;
 
 @ApplicationPath("/restservices")
 public class JerseyConfig extends Application {
+
 }

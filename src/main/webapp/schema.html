@@ -33,10 +33,12 @@
         <button id="loseWeightButton"><img src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FTZ7ay83uZTnqJtzPOb14y%2Fimages%2Fbody-muscles%2FSLIM_SHREDDED_BODY.png&w=128&q=75"></button>
         <button id="shredButton"><img src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FTZ7ay83uZTnqJtzPOb14y%2Fimages%2Fbody-muscles%2FBEACH_BODY.png&w=128&q=75"></button>
 
-<!--        <button id="myBtn">Open Modal</button>-->
 
         <div id="myModalShredded" class="modal">
-            <!-- Modal content -->
+
+<!--            todo: de options nog aanpassen, denk 3 andere oefeningen suggesteren:                 dddd                    dd                  dd
+ook de aanpaskno doet het nog niet-->
+
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h1>Je hebt gekozen voor SHREDDED</h1>
@@ -47,44 +49,130 @@
                         <th>Herhalingen</th>
                         <th>Rust</th>
                     </tr>
-                    <tr name="bankdrukken">
+                    <tr name="Incline Barbell Bench Press">
                         <td>
-                            <select id="bankdrukken">
-                                <option>bankdrukken</option>
+                            <select id="InclineBarbellBench Press">
+                                <option>Incline Barbell Bench Press</option>
                                 <option>een andere optie</option>
                             </select>
                         </td>
-                        <td>4</td>
-                        <td>4</td>
+                        <td>3</td>
+                        <td>10</td>
                         <td>2 min</td>
                     </tr>
-                    <tr name="incline">
+                    <tr name="Dumbbell Fly">
                         <td>
-                            <select>
-                                <option>incline bench</option>
+                            <select id="DumbbellFly">
+                                <option>Dumbbell Fly</option>
                                 <option>een andere optie</option>
                             </select>
                         </td>
-                        <td>4</td>
-                        <td>4</td>
+                        <td>3</td>
+                        <td>10-12</td>
+                        <td>3 min</td>
+                    </tr>
+                    <tr name="Weighted Dip">
+                        <td>
+                            <select id="WeightedDip">
+                                <option>Weighted Dip</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>10-12</td>
                         <td>2 min</td>
                     </tr>
-                    <tr name="deadlift">
+                    <tr name="Pec-Deck">
                         <td>
-                            <select>
-                                <option>deadlift</option>
+                            <select id="Pec-Deck">
+                                <option>Pec-Deck</option>
                                 <option>een andere optie</option>
                             </select>
                         </td>
-                        <td>4</td>
-                        <td>4</td>
+                        <td>3</td>
+                        <td>10-12</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Cable Crossover">
+                        <td>
+                            <select id="CableCrossover">
+                                <option>Cable Crossover</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>10-12</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Pushup">
+                        <td>
+                            <select id="Pushup">
+                                <option>Pushup</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>10-12</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Hanging Leg Raise">
+                        <td>
+                            <select id="HangingLegRaise">
+                                <option>Hanging Leg Raise</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>10-12</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Decline Situp">
+                        <td>
+                            <select id="DeclineSitup">
+                                <option>Decline Situp</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>15</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Side Bends">
+                        <td>
+                            <select id="SideBends">
+                                <option>Side Bends</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>15</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Plank">
+                        <td>
+                            <select id="Plank">
+                                <option>Plank</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>till failure</td>
+                        <td>3 min</td>
+                    </tr>
+                    <tr name="Rope Crunch">
+                        <td>
+                            <select id="RopeCrunch">
+                                <option>Rope Crunch</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>3</td>
+                        <td>15</td>
                         <td>2 min</td>
                     </tr>
                 </table>
                 <button id="knopShredded">aanpassen</button>
-
             </div>
-
         </div>
 
 
@@ -93,11 +181,225 @@
 
 
 
+        <div id="myModalLoseWeight" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="dichtdoen" class="close">&times;</span>
+                <h1>Je hebt gekozen voor LOSE WEIGHT</h1>
+                <table>
+                    <tr>
+                        <th>Oefening</th>
+                        <th>Sets</th>
+                        <th>Herhalingen</th>
+                        <th>Rust</th>
+                    </tr>
+                    <tr name="Row Machine">
+                        <td>
+                            <select id="RowMachine">
+                                <option>Row Machine</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>1</td>
+                        <td>15 min</td>
+                        <td>-</td>
+                    </tr>
+                    <tr name="Jump Rope">
+                        <td>
+                            <select id="JumpRope">
+                                <option>Jump Rope</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>5</td>
+                        <td>1-2 min</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Burpees">
+                        <td>
+                            <select id="Burpees">
+                                <option>Burpees</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>5 min</td>
+                    </tr>
+                    <tr name="Kettlebell Swings">
+                        <td>
+                            <select id="KettlebellSwing">
+                                <option>Kettlebell Swing</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>2 min</td>
+                    </tr>
+                    <tr name="Burpees">
+                        <td>
+                            <select id="Burpees1">
+                                <option>Burpees</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>5 min</td>
+                    </tr>
+                    <tr name="Pushup">
+                        <td>
+                            <select id="Pushup1">
+                                <option>Pushup</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>3 min</td>
+                    </tr>
+                    <tr name="Lunges">
+                        <td>
+                            <select id="Lunges">
+                                <option>Lunges</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>5 min</td>
+                    </tr>
+                    <tr name="Deadlift">
+                        <td>
+                            <select id="Deadlift">
+                                <option>deadlift</option>
+                                <option>een andere optie</option>
+                            </select>
+                        </td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>5 min</td>
+                    </tr>
+                </table>
+                <button id="knopShredded1">aanpassen</button>
+            </div>
+        </div>
+
     </div>
 
 
-    <div class="itemSidebar">
 
+
+
+
+
+
+
+    <div id="myModalGainMuscleMass" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="dichtdoenGainMuscle" class="close">&times;</span>
+            <h1>Je hebt gekozen voor GAIN MUSCLE</h1>
+            <table>
+                <tr>
+                    <th>Oefening</th>
+                    <th>Sets</th>
+                    <th>Herhalingen</th>
+                    <th>Rust</th>
+                </tr>
+                <tr name="Deadlift">
+                    <td>
+                        <select id="Deadlift1">
+                            <option>Deadlift</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>5 min</td>
+                </tr>
+                <tr name="Dips">
+                    <td>
+                        <select id="Dips">
+                            <option>Dips</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>2 min</td>
+                </tr>
+                <tr name="Pull Ups">
+                    <td>
+                        <select id="PullUps">
+                            <option>Pull Ups</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>2 min</td>
+                </tr>
+
+                <tr name="Bench Press">
+                    <td>
+                        <select id="BenchPress">
+                            <option>Bench Press</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>2 min</td>
+                </tr>
+
+                <tr name="Overhead Press">
+                    <td>
+                        <select id="OverheadPress">
+                            <option>Overhead Press</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>2 min</td>
+                </tr>
+
+                <tr name="Rows">
+                    <td>
+                        <select id="rows">
+                            <option>Rows</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>2 min</td>
+                </tr>
+
+                <tr name="Pull Ups">
+                    <td>
+                        <select id="Pull Ups">
+                            <option>Pull Ups</option>
+                            <option>een andere optie</option>
+                        </select>
+                    </td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>2 min</td>
+                </tr>
+            </table>
+            <button id="knopShredded2">aanpassen</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+    <div class="itemSidebar">
     </div>
     <div class="ItemFooter"> footer</div>
 

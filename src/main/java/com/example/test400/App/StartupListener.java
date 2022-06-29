@@ -1,5 +1,6 @@
 package com.example.test400.App;
 
+import com.example.test400.Domein.FavorietenLijst;
 import com.example.test400.Domein.Oefening;
 import com.example.test400.Domein.Tips.Tips;
 import com.example.test400.Domein.Blog.Mening;
@@ -21,6 +22,15 @@ public class StartupListener implements ServletContextListener {
     public static ArrayList<Mening> blogArtikelen = new ArrayList<>();
     public static ArrayList<Recept> recepten = new ArrayList<>();
     public static ArrayList<Tips> tipsTricks = new ArrayList<>();
+    //todo:
+    public static ArrayList<FavorietenLijst> favorietenLijst = new ArrayList<>();
+
+    public static ArrayList<Oefening> borstLijst = new ArrayList<>();
+    public static ArrayList<Oefening> rugLijst = new ArrayList<>();
+    public static ArrayList<Oefening> bicepLijst = new ArrayList<>();
+    public static ArrayList<Oefening> tricepLijst = new ArrayList<>();
+
+//todo: als attribuut categorie toevoegen zodat ik ze niet zelf in een lijst hoef te doen:
 
     public void contextInitialized(ServletContextEvent sce) {
         //recept 1
@@ -75,9 +85,23 @@ public class StartupListener implements ServletContextListener {
         oefeningen.add(o4);
         Oefening o5 = new Oefening("incline-bench", 10, 105, "bovenkant-borst", "omschrijving", "https://static.gymhero.me/everkinetics/incline_shoulder_press_dumbbell-small-frame_1.png");
         oefeningen.add(o5);
-        oefeningen.add(new Oefening("lat-pulldown", 10, 139, "rug", "omschrijving", "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Wide-Grip_Lat_Pulldown_F_WorkoutLabs.png"));
-        oefeningen.add(new Oefening("squad", 30, 32, "bovenbeen", "omschrijving", "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.svg"));
-        oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten", "omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png"));
+        Oefening o6 = new Oefening("lat-pulldown", 10, 139, "rug", "omschrijving", "https://cdn-xi3mbccdkztvoept8hl.netdna-ssl.com/wp-content/uploads/watermarked/Wide-Grip_Lat_Pulldown_F_WorkoutLabs.png");
+        oefeningen.add(o6);
+        Oefening o7 = new Oefening("squad", 30, 32, "bovenbeen", "omschrijving", "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.svg");
+        oefeningen.add(o7);
+        Oefening o8 = new Oefening("calf-raises", 20, 202, "kuiten", "omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png");
+        oefeningen.add(o8);
+
+        borstLijst.add(o2);
+        borstLijst.add(o5);
+        borstLijst.add(o1);
+
+        rugLijst.add(o6);
+
+        bicepLijst.add(o3);
+
+        tricepLijst.add(o4);
+
 
 
         //extra

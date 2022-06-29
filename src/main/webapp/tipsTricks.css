@@ -2,25 +2,23 @@
     display: grid;
     height: 100vh;
     grid-template-rows: auto auto 1fr auto auto auto;
-
     gap: 24px;
 }
-
+body {
+    background-image: url("https://wallpaper.dog/large/20502789.jpg");
+    position: relative;
+}
 
 .itemHeader{
-    border-style: solid;
     grid-column: 1/span 12;
 }
 .itemHeader{
-    background-color: lightgrey;
 }
 
 .itemNavigation{
-    border-style: solid;
     grid-column:  1/span 12;;
 }
 .itemMain{
-    border-style: solid;
     grid-column: 4/span 9;
 }
 .itemMain{
@@ -39,13 +37,11 @@
 
 
 .itemSidebar{
-    background-color: #333;
 }
 .itemSidebar li{
-    background-color: #333;
 }
 .itemSidebar li button{
-    background-color: #333;
+    background-color: black;
 }
 .itemSidebar li button{
     padding: 14px 16px;
@@ -91,14 +87,14 @@ ul {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: navy;
+    background-color: red;
     color: white;
 }
 
 
 h1{
     text-align: center;
-    color: navy;
+    color: white;
     font-size: 60px;
 }
 
@@ -108,3 +104,18 @@ h2{
 p{
     font-weight: bold;
 }
+h5 {
+    font-size: 25px;
+    color: red;
+    position: relative;
+    text-align: center;
+    top: -20px;
+
+}
+#tipFormulier{
+    position: absolute;
+    right: 250px;
+    width: 200px;
+    height: 20px;
+}
+

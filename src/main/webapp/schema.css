@@ -6,28 +6,25 @@
     gap: 24px;
 }
 
+body {
+    background-image: url("https://wallpaper.dog/large/20502789.jpg");
+    position: relative;
+}
 
 .itemHeader {
-    border-style: solid;
     grid-column: 1/span 12;
 }
 
-.itemHeader {
-    background-color: lightgrey;
-}
 
 .itemNavigation {
-    border-style: solid;
     grid-column: 1/span 12;;
 }
 
 .itemMain {
-    border-style: solid;
     grid-column: 4/span 9;
 }
 
 .itemMain {
-    background-color: lightgrey;
 }
 
 .itemSidebar {
@@ -101,14 +98,14 @@ ul {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: navy;
+    background-color: red;
     color: white;
 }
 
 
 h1 {
     text-align: center;
-    color: navy;
+    color: white;
     font-size: 60px;
 }
 
@@ -126,10 +123,12 @@ p {
     height: 10px;
     width: 10px;
 }
+
 .itemMain button input {
     width: 25px;
     height: 25px;
 }
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -140,8 +139,8 @@ p {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -167,6 +166,7 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -182,3 +182,46 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+
+h3 {
+    font-size: 25px;
+    color: red;
+    position: relative;
+    text-align: center;
+    top: -20px;
+
+}
+
+button{
+    width: 350px;
+    text-align: center;
+}
+/*#labelShred{*/
+/*    font-size: 25px;*/
+/*    position: relative;*/
+/*    color: white;*/
+/*    left: 35%;*/
+/*    top: 40px;*/
+/*}*/
+/*#labelLoseWeight{*/
+/*    font-size: 25px;*/
+/*    color: white;*/
+/*    position: relative;*/
+/*    top: 40px;*/
+/*    left: 51%;*/
+/*}*/
+/*#labelGainMuscleMass {*/
+/*    font-size: 25px;*/
+/*    color: white;*/
+/*    position: relative;*/
+/*    top: 40px;*/
+/*    left: 250px;*/
+/*}*/
+p {
+    color: red;
+}
+.ItemFooter{
+    text-align: center;
+}
+

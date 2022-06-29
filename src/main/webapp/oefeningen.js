@@ -9,7 +9,7 @@ let knopTricep = document.getElementById('tricep')
 
 //  vraag alle oefeningen op:
 function vraagAlleOefeningeOp() {
-    return fetch('http://localhost:8080/restservices/oefeningen')
+    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen')
         .then(function (data) {
             return data.json()
         })
@@ -59,7 +59,7 @@ vraagAllesOp()
 
 //vraag borst oefeningen op:
 function vraagOefeningeOpBorst() {
-    return fetch('http://localhost:8080/restservices/oefeningen/borst')
+    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen/borst')
         .then(function (data) {
             return data.json()
         })
@@ -88,7 +88,7 @@ knopBorst.addEventListener('click', e => {
 
 //vraag rug oefeningen op:
 function vraagOefeningeOpRug() {
-    return fetch('http://localhost:8080/restservices/oefeningen/rug')
+    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen/rug')
         .then(function (data) {
             return data.json()
         })

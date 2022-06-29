@@ -1,5 +1,5 @@
 function haalBlogOp(){
-    return fetch('http://localhost:8080/restservices/blog')
+    return fetch('https://ipasproject.herokuapp.com/restservices/blog')
         .then(r => {return r.json()})
         .then(j => {return j})
 }
@@ -24,7 +24,7 @@ let formulier = document.querySelector('#artikelForumuler')
 
 
 function versturenMaar(mening) {
-    return fetch('http://localhost:8080/restservices/blog', {
+    return fetch('https://ipasproject.herokuapp.com/restservices/blog', {
         method: 'POST',
         body : JSON.stringify(mening),
         headers: {

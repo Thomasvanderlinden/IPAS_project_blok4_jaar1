@@ -1,5 +1,5 @@
 function vraagTipsTricksOp() {
-    return fetch('http://localhost:8080/restservices/tipsTricks')
+    return fetch('https://ipasproject.herokuapp.com/restservices/tipsTricks')
         .then(function (data) {
             return data.json()
         })
@@ -32,7 +32,7 @@ let formulier = document.querySelector('#tipFormulier')
 
 
 function versturenMaar(tip) {
-    return fetch('http://localhost:8080/restservices/tipsTricks', {
+    return fetch('https://ipasproject.herokuapp.com/restservices/tipsTricks', {
         method: 'POST',
         body : JSON.stringify(tip),
         headers: {

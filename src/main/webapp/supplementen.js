@@ -1,5 +1,5 @@
 function vraagSupplementenOp(){
-    return fetch('http://localhost:8080/restservices/supplementen')
+    return fetch('https://ipasproject.herokuapp.com/restservices/supplementen')
         .then(r =>{return r.json()})
         .then(s =>{return s})
 }

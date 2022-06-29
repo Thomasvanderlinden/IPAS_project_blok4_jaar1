@@ -200,7 +200,7 @@ function verwijderOefening(event, x) {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(vraagOefeningeOpFavorieten())
+    }).then(verversPagina)
 
 
 }
@@ -223,27 +223,23 @@ knopFavorieten.addEventListener('click', e => {
     })
 
 })
+function verversPagina(){
+    let lijstje = document.getElementById('oefeningenLijst')
 
-
-function vraagAllesOp() {
-    vraagAlleOefeningeOp().then(oefeningen => {
+    vraagOefeningeOpFavorieten().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `
-
-
-
-<button onclick="doeIets(event)"><div class="oefeningen">
-                                   <h2>${o.naam}</h2>
-                                   <p>${o.spiergroep}</p>
-                                   <img src="${o.plaatje}" width="130px" height="110px">
-                                   <button onclick="verstuurKnopDingen(event, '${o.naam}')" >Favoriet</button>
-                              </div></button>`
+            lijstje.innerHTML += `<div id="dezeDiv"><button id="knopId" class="knopVanDeOefening" ">
+                                    <div class="oefeningen">
+                                        <h2>${o.naam}</h2>
+                                        <p>${o.spiergroep}</p>
+                                        <img src="${o.plaatje}" width="130px" height="110px">
+                                        <button onclick="verwijderOefening(event, '${o.naam}' )">delete</button>
+                                    </div>`
         }
     })
-}
 
-vraagAllesOp()
+}
 
 
 

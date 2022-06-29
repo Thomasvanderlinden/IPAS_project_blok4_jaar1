@@ -9,7 +9,7 @@ let knopTricep = document.getElementById('tricep')
 
 //  vraag alle oefeningen op:
 function vraagAlleOefeningeOp() {
-    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen')
+    return fetch('http://localhost:8080/restservices/oefeningen')
         .then(function (data) {
             return data.json()
         })
@@ -20,10 +20,24 @@ function vraagAlleOefeningeOp() {
 
 knopAlles.addEventListener('click', vraagAllesOp)
 
-function doeIets(event){
+function doeIets(event) {
     event.preventDefault()
     document.getElementById("popup-1").classList.toggle("active");
 
+}
+
+function verstuurKnopDingen(event, x) {
+    event.preventDefault()
+    let data = {naam : x}
+    console.log(x)
+
+    return fetch('http://localhost:8080/restservices/oefeningen/favoriet', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
 }
 
 
@@ -32,20 +46,14 @@ function vraagAllesOp() {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
             lijstje.innerHTML += `
-<div class="popup" id="popup-1">
-  <div class="overlay"></div>
-  <div class="content">
-      <div class="close-btn" >&times;</div>
 
-    <p>${o.omschrijving}</p>
-  </div>
-</div>
 
 
 <button onclick="doeIets(event)"><div class="oefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
+                                   <button onclick="verstuurKnopDingen(event, '${o.naam}')" >Favoriet</button>
                               </div></button>`
         }
     })
@@ -54,12 +62,9 @@ function vraagAllesOp() {
 vraagAllesOp()
 
 
-
-
-
 //vraag borst oefeningen op:
 function vraagOefeningeOpBorst() {
-    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen/borst')
+    return fetch('http://localhost:8080/restservices/oefeningen/borst')
         .then(function (data) {
             return data.json()
         })
@@ -88,7 +93,7 @@ knopBorst.addEventListener('click', e => {
 
 //vraag rug oefeningen op:
 function vraagOefeningeOpRug() {
-    return fetch('https://ipasproject.herokuapp.com/restservices/oefeningen/rug')
+    return fetch('http://localhost:8080/restservices/oefeningen/rug')
         .then(function (data) {
             return data.json()
         })

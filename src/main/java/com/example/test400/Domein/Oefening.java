@@ -21,6 +21,30 @@ public class Oefening {
         return omschrijving;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setTijd(int tijd) {
+        this.tijd = tijd;
+    }
+
+    public void setVerbrande_kcal(int verbrande_kcal) {
+        this.verbrande_kcal = verbrande_kcal;
+    }
+
+    public void setSpiergroep(String spiergroep) {
+        this.spiergroep = spiergroep;
+    }
+
+    public void setOmschrijving(String omschrijving) {
+        this.omschrijving = omschrijving;
+    }
+
+    public void setPlaatje(String plaatje) {
+        this.plaatje = plaatje;
+    }
+
     public String getPlaatje() {
         return plaatje;
     }

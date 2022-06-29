@@ -1,6 +1,6 @@
 package com.example.test400.App;
 
-import com.example.test400.Domein.FavorietenLijst;
+import com.example.test400.Domein.Favoriet;
 import com.example.test400.Domein.Oefening;
 import com.example.test400.Domein.Tips.Tips;
 import com.example.test400.Domein.Blog.Mening;
@@ -23,7 +23,7 @@ public class StartupListener implements ServletContextListener {
     public static ArrayList<Recept> recepten = new ArrayList<>();
     public static ArrayList<Tips> tipsTricks = new ArrayList<>();
     //todo:
-    public static ArrayList<FavorietenLijst> favorietenLijst = new ArrayList<>();
+    public static ArrayList<Favoriet> favorietenLijst = new ArrayList<>();
 
     public static ArrayList<Oefening> borstLijst = new ArrayList<>();
     public static ArrayList<Oefening> rugLijst = new ArrayList<>();

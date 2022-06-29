@@ -1,5 +1,5 @@
 function laatReceptenZien(){
-    return fetch('https://ipasproject.herokuapp.com/restservices/voeding')
+    return fetch('http://localhost:8080/restservices/voeding')
         .then(r => {return r.json()})
         .then(p => {return p})
 }

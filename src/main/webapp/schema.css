@@ -197,31 +197,16 @@ button{
     width: 350px;
     text-align: center;
 }
-/*#labelShred{*/
-/*    font-size: 25px;*/
-/*    position: relative;*/
-/*    color: white;*/
-/*    left: 35%;*/
-/*    top: 40px;*/
-/*}*/
-/*#labelLoseWeight{*/
-/*    font-size: 25px;*/
-/*    color: white;*/
-/*    position: relative;*/
-/*    top: 40px;*/
-/*    left: 51%;*/
-/*}*/
-/*#labelGainMuscleMass {*/
-/*    font-size: 25px;*/
-/*    color: white;*/
-/*    position: relative;*/
-/*    top: 40px;*/
-/*    left: 250px;*/
-/*}*/
+
 p {
     color: red;
 }
 .ItemFooter{
     text-align: center;
+}
+h6{
+    color: red;
+    text-align: center;
+    font-size: 50px;
 }
 

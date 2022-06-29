@@ -27,8 +27,9 @@ function doeIets(event) {
 }
 
 function verstuurKnopDingen(event, x) {
-
     event.preventDefault()
+
+
     let data = {naam: x}
     console.log(x)
 
@@ -42,7 +43,7 @@ function verstuurKnopDingen(event, x) {
 }
 
 
-function togglePopup(eve){
+function togglePopup(eve) {
     eve.preventDefault()
     document.getElementById("popup-1").classList.toggle("active");
 }
@@ -60,12 +61,13 @@ function vraagAllesOp() {
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    
-                                   <button onclick="verstuurKnopDingen(event, '${o.naam}')" ><img src="${o.plaatje}" width="130px" height="110px"></button>
+                                   <button id="knop" onclick="verstuurKnopDingen(event, '${o.naam}')" ><img src="${o.plaatje}" width="130px" height="110px"></button>
 <!--                                   <button onclick="togglePopup(event)">beschrijving</button>-->
                               </span>`
         }
     })
 }
+
 //todo: kan evt het plaatje een knop maken
 
 vraagAllesOp()
@@ -89,7 +91,7 @@ knopBorst.addEventListener('click', e => {
     vraagOefeningeOpBorst().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div class="oefeningen">
+            lijstje.innerHTML += `<div id="divoefeningen" class="oefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
@@ -118,7 +120,7 @@ knopRug.addEventListener('click', e => {
     vraagOefeningeOpRug().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div class="oefeningen">
+            lijstje.innerHTML += `<div id="divoefeningen" class="oefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
@@ -147,7 +149,7 @@ knopBicep.addEventListener('click', e => {
     vraagOefeningeOpBicep().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div class="oefeningen">
+            lijstje.innerHTML += `<div  id="divoefeningen" class="oefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
@@ -176,7 +178,7 @@ knopTricep.addEventListener('click', e => {
     vraagOefeningeOpTricep().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="dezeDiv">
+            lijstje.innerHTML += `<div  id="divoefeningen">
                                     <div class="oefeningen">
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
@@ -221,30 +223,31 @@ knopFavorieten.addEventListener('click', e => {
     vraagOefeningeOpFavorieten().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="dezeDiv">
+            lijstje.innerHTML += `<div id="divoefeningen">
                                     <div class="oefeningen">
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
-                                        <img src="${o.plaatje}" width="130px" height="110px">
-                                        <button onclick="verwijderOefening(event, '${o.naam}' )">delete</button>
+                                        
+                                        <button onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
                                     </div>`
         }
     })
 
 })
-function verversPagina(){
+
+function verversPagina() {
     let lijstje = document.getElementById('oefeningenLijst')
 
     vraagOefeningeOpFavorieten().then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="dezeDiv">
+            lijstje.innerHTML += `<div id="divoefeningen">
                                     <div class="oefeningen">
                                     
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
-                                        <img src="${o.plaatje}" width="130px" height="110px">
-                                        <button type="button" onclick="verwijderOefening(event, '${o.naam}' )">delete</button>
+                                        
+                                        <button type="button" onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
                                     </div>`
         }
     })

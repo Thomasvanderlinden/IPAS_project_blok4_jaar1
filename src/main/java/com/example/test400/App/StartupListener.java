@@ -23,7 +23,7 @@ public class StartupListener implements ServletContextListener {
     public static ArrayList<Recept> recepten = new ArrayList<>();
     public static ArrayList<Tips> tipsTricks = new ArrayList<>();
     //todo:
-    public static ArrayList<Favoriet> favorietenLijst = new ArrayList<>();
+    public static ArrayList<Oefening> favorietenLijst = new ArrayList<>();
 
     public static ArrayList<Oefening> borstLijst = new ArrayList<>();
     public static ArrayList<Oefening> rugLijst = new ArrayList<>();
@@ -103,6 +103,7 @@ public class StartupListener implements ServletContextListener {
         tricepLijst.add(o4);
 
 
+        favorietenLijst.add(o1);
 
         //extra
         oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten", "omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png"));

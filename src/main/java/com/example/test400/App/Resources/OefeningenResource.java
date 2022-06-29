@@ -7,6 +7,7 @@ import com.example.test400.Domein.Supplement.Supplement;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 @Path("/oefeningen")
@@ -33,21 +34,39 @@ public class OefeningenResource {
     @Consumes("application/json")
     public Response ontvangFavorietenLijst(Favoriet favoriet) {
 
-        for (Favoriet f : StartupListener.favorietenLijst) {
-            if (f.naam.equals(favoriet.naam)) {
+        for (Oefening o : StartupListener.favorietenLijst) {
+            if (o.getNaam().equals(favoriet.naam)) {
                 return Response.status(404).entity("already").build();
             }
         }
-        StartupListener.favorietenLijst.add(favoriet);
-        return Response.ok().build();
+        for(Oefening o : StartupListener.oefeningen){
+            if(o.getNaam().equals(favoriet.naam)){
+                StartupListener.favorietenLijst.add(o);
+            }
+        }
+        return Response.ok(StartupListener.favorietenLijst).build();
     }
     //todo: delete maken, verwijderen uit favorietenlijst:
 
 
+    @DELETE
+    @Path("favoriet")
+    @Produces("application/json")
+    public Response verwijderFavoriet(Favoriet favoriet) {
+        for(Oefening o : StartupListener.favorietenLijst){
+            if(o.getNaam().equals(favoriet.naam)){
+                StartupListener.favorietenLijst.remove(o);
+                return Response.ok().build();
+            }
+        }
+
+        return Response.status(404).entity("not found").build();
+    }
+
     @GET
     @Path("favoriet")
     @Produces("application/json")
-    public List<Favoriet> returnFavorietenLijst() {
+    public List<Oefening> returnFavorietenLijst() {
         return StartupListener.favorietenLijst;
     }
 

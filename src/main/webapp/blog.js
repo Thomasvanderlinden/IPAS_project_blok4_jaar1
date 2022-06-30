@@ -1,6 +1,10 @@
 let lijstje = document.getElementById('mijnLijst')
 let knop = document.getElementById('opsturenBlog')
 let formulier = document.querySelector('#artikelForumuler')
+let heroku = "https://ipasproject.herokuapp.com/"
+let localhost = 'http://localhost:8080/';
+let url = heroku
+
 
 function loginMetFormulier() {
     if (window.sessionStorage.getItem("myJWT")) {
@@ -13,7 +17,7 @@ loginMetFormulier()
 
 
 function haalBlogOp() {
-    return fetch('http://localhost:8080/restservices/blog')
+    return fetch(url + 'restservices/blog')
         .then(r => {
             return r.json()
         })
@@ -26,7 +30,7 @@ function geefBogInformatieWeer() {
     haalBlogOp().then(x => {
         lijstje.innerHTML = '';
         for (let o of x) {
-            lijstje.innerHTML += `<div class="blogArtikelen" <li> <h2> ${o.naam}</h2> <h3> ${o.onderwerp}</h3> <p>${o.tekst}</p></li></div>`
+            lijstje.innerHTML += `<div class="blogArtikelen" <li> <h2> ${o.naam}</h2> <h8> ${o.onderwerp}</h8> <p>${o.tekst}</p></li></div>`
 
         }
     })
@@ -39,7 +43,7 @@ function versturenMeningNaarServer(mening) {
     if(mening.naam === "" || mening.tekst === "" || mening.onderwerp === ""){
         return alert("niet alle velden zijn ingevuld!")
     }
-    return fetch('http://localhost:8080/restservices/blog', {
+    return fetch(url + 'restservices/blog', {
         method: 'POST',
         body: JSON.stringify(mening),
         headers: {

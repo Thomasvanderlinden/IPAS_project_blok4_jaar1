@@ -102,12 +102,10 @@ h1{
     border: 5px ;
 }
 h2{
-    color: white;
     text-align: center;
 }
 p{
     text-align: center;
-    color: white;
 }
 .itemHeader{
 }
@@ -206,9 +204,19 @@ body{
 }
 /*hier moet je zijn voor de indeling van de pagina*/
 #divoefeningen{
-display: inline-block;
+    display: inline-block;
     padding: 25px 25px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 35px;
 }
+
+
+
 img{
     border-radius: 10%;
 }

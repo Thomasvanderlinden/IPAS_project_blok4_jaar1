@@ -1,9 +1,9 @@
 let lijstje = document.getElementById('tipsTricksLijst')
 let knop = document.getElementById('opsturenTip')
 let formulier = document.querySelector('#tipFormulier')
-
-
-
+let heroku = "https://ipasproject.herokuapp.com/"
+let localhost = 'http://localhost:8080/';
+let url = heroku
 
 function loginMetFormulier() {
     if (window.sessionStorage.getItem("myJWT")) {
@@ -12,11 +12,12 @@ function loginMetFormulier() {
         document.forms.tipFormulier.style = "display:none";
     }
 }
+
 loginMetFormulier()
 
 
 function vraagTipsTricksOp() {
-    return fetch('http://localhost:8080/restservices/tipsTricks')
+    return fetch(url + 'restservices/tipsTricks')
         .then(function (data) {
             return data.json()
         })
@@ -43,16 +44,11 @@ geefTipsTricksInformatieWeer()
 
 
 function versturenMaar(tip) {
-
-    if(tip.tipnaam === "" || tip.auteur === "" || tip.onderwerp === "" || tip.tekstVanDeTip === ""){
+    if (tip.tipnaam === "" || tip.auteur === "" || tip.onderwerp === "" || tip.tekstVanDeTip === "") {
         return alert("niet alle velden zijn ingevuld!")
     }
 
-
-
-
-
-    return fetch('http://localhost:8080/restservices/tipsTricks', {
+    return fetch(url + 'restservices/tipsTricks', {
         method: 'POST',
         body: JSON.stringify(tip),
         headers: {
@@ -63,12 +59,9 @@ function versturenMaar(tip) {
 
 }
 
-
 knop.addEventListener('click', r => {
     r.preventDefault()
-
     let rauweData = new FormData(formulier)
-
     let tip = {
         tipnaam: rauweData.get('tipnaam'),
         onderwerp: rauweData.get('onderwerp'),

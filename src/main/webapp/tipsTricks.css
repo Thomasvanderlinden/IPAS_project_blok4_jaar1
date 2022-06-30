@@ -1,49 +1,56 @@
-.oefenContainer{
+.oefenContainer {
     display: grid;
     height: 100vh;
     grid-template-rows: auto auto 1fr auto auto auto;
     gap: 24px;
 }
+
 body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
     position: relative;
 }
 
-.itemHeader{
+.itemHeader {
     grid-column: 1/span 12;
 }
-.itemHeader{
+
+.itemHeader {
 }
 
-.itemNavigation{
-    grid-column:  1/span 12;;
+.itemNavigation {
+    grid-column: 1/span 12;;
 }
-.itemMain{
+
+.itemMain {
     grid-column: 4/span 9;
 }
-.itemMain{
-    background-color: lightgrey;
+
+.itemMain {
 }
 
-.itemSidebar{
+.itemSidebar {
     border-style: solid;
     grid-column: 1/4;
     grid-row: 3;
 }
-.itemSidebar{
+
+.itemSidebar {
     position: relative;
     width: 200px;
 }
 
 
-.itemSidebar{
+.itemSidebar {
 }
-.itemSidebar li{
+
+.itemSidebar li {
 }
-.itemSidebar li button{
+
+.itemSidebar li button {
     background-color: black;
 }
-.itemSidebar li button{
+
+.itemSidebar li button {
     padding: 14px 16px;
     font-size: 17px;
     color: white;
@@ -51,9 +58,11 @@ body {
     border: none;
 
 }
+
 ul {
     list-style-type: none;
 }
+
 .itemSidebar li button:hover {
     background-color: #ddd;
     color: black;
@@ -64,6 +73,7 @@ ul {
     border-style: solid;
     grid-column: 1/span 12;
 }
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -91,19 +101,22 @@ ul {
     color: white;
 }
 
+p {
+    font-weight: bold;
+}
 
-h1{
+h1 {
     text-align: center;
-    color: white;
     font-size: 60px;
 }
 
-h2{
-    color: navy;
+h2 {
 }
-p{
-    font-weight: bold;
+h3{
+    font-size: 20px;
+    font-family: Arial, monospace;
 }
+
 h5 {
     font-size: 25px;
     color: red;
@@ -112,10 +125,21 @@ h5 {
     top: -20px;
 
 }
-#tipFormulier{
+
+#tipFormulier {
     position: absolute;
     right: 250px;
     width: 200px;
     height: 20px;
 }
 
+.oefeningen {
+    margin-bottom: 20px;
+    border-color: white;
+    padding: 20px 20px;
+    border-style: solid;
+    background-color: white;
+    opacity: 60%;
+    border-radius: 35px;
+
+}

@@ -52,7 +52,7 @@ public class StartupListener implements ServletContextListener {
         ingredientenOGCG.add(new IngredientenRecept("bosui", 2));
         ingredientenOGCG.add(new IngredientenRecept("rode ui", 1));
         ingredientenOGCG.add(new IngredientenRecept("stokbrood", 1));
-        Recept r2 = new Recept("spaanse curry", 892, 62, 50, 46, ingredientenOGCG, "Deze Thaise rode currypasta is echt heet! Als je deze currypasta gaat maken kun je voor de hoeveelheid pepers het beste uitgaan van wat je normaal verdraag", "https://d1mlbwr23caxox.cloudfront.net/public/sites/default/files/styles/medium/public/recipe-images/Thai_Red_Curry_Paste_0.jpg?VersionId=1ppamqgdDxKgoZaZsFZacwdW74clVLv7&itok=iMvVf5bw");
+        Recept r2 = new Recept("Spaanse curry", 892, 62, 50, 46, ingredientenOGCG, "Deze Thaise rode currypasta is echt heet! Als je deze currypasta gaat maken kun je voor de hoeveelheid pepers het beste uitgaan van wat je normaal verdraag", "https://gewoonhanne.nl/wp-content/uploads/2019/06/P5180370.jpg");
 
         recepten.add(r1);
         recepten.add(r2);
@@ -116,19 +116,27 @@ public class StartupListener implements ServletContextListener {
         oefeningen.add(new Oefening("calf-raises", 20, 202, "kuiten", "omschrijving", "https://i.pinimg.com/originals/3a/f0/b1/3af0b10574c1bf1ead4ad67b6654e430.png"));
 
 //tips maken:
-        Tips t1 = new Tips("tipnaam1", "Wake up with a cup of coffee before your morning workout.", "The caffeine in a pre-workout cup of joe helps stimulate your central nervous system, so you’ll have a little extra oomph in your indoor cycling or boot camp class. Plus, in " +
+        Tips t1 = new Tips("Test Yourself", "Wake up with a cup of coffee before your morning workout.", "The caffeine in a pre-workout " +
+                "cup of joe helps stimulate your central nervous system, so you’ll have a little extra oomph in your indoor cycling or boot camp class. Plus, in " +
                 "addition to a performance boost, research shows that it can actually make exercise feel more enjoyable, so you’re more likely to push harder.\n" +
                 "\n" +
-                "Drink up a half hour before you start sweating to give it time to kick in, Jessica Cording, R.D., tells SELF.", "auteur1");
-        Tips t2 = new Tips("tipnaam2", "ondewerp2", "tekstvandetip2", "auteur2");
-        Tips t3 = new Tips("tipnaam3", "ondewerp3", "tekstvandetip3", "auteur3");
+                "Drink up a half hour before you start sweating to give it time to kick in, Jessica Cording, R.D., tells SELF.", "Frans effi");
+        Tips t2 = new Tips("Be Proud", "evertything you do effects others around you", "Before diving into the practical gym tips for beginners, remember that the most" +
+                " important exercise catalyst is confidence. Whether you're lifting 100 pounds or 1 pound, you should be proud of yourself for showing up at the gym" +
+                " at all! Don't be intimidated by others or scared to ask for help.\n" +
+                "Remember that everyone at the gym was once in your shoes. Those first few workouts, no matter how \"easy\" they are in terms of physical intensity, " +
+                "are often the most mentally challenging. Be proud, remain confident and trust that your gym skills and fitness savvy will increase over time.",
+                "Charles arms");
+        Tips t3 = new Tips("Work Hard", "Why not right go hard or go home", "If you're not sweating by the end of your workout, perhaps " +
+                "you aren't pushing yourself hard enough. Try to reach an \"out of breath\" state at least once during your workout by incorporating high-intensity " +
+                "movements like sprinting, jumping jacks, burpees or squat jumps.", "Chez david");
         tipsTricks.add(t1);
         tipsTricks.add(t2);
         tipsTricks.add(t3);
 
 //mening maken:
-        blogArtikelen.add(new Mening("Artikel 1", "informatie die niet boeit", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
-        blogArtikelen.add(new Mening("Artikel 2", "dit is iets anders man", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
+        blogArtikelen.add(new Mening("Artikel 1", "Wat als alles anders gaat", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
+        blogArtikelen.add(new Mening("Artikel 2", "Wat als alles anders gaat", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
 
 
     }

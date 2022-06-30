@@ -87,7 +87,6 @@ h1 {
 }
 
 .itemMain {
-    background-color: lightgrey;
 }
 body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
@@ -100,6 +99,19 @@ h3 {
     text-align: center;
     top: -20px;
 
+}
+.recepten{
+    width: 250px;
+    height: 450px;
+    display: inline-grid;
+    padding: 25px 25px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 35px;
 }
 
 

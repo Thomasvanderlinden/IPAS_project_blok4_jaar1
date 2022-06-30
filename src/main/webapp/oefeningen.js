@@ -7,10 +7,15 @@ let knopBicep = document.getElementById('bicep')
 let knopTricep = document.getElementById('tricep')
 let knopFavorieten = document.getElementById('favorieten')
 
+
+
+let heroku = "https://ipasproject.herokuapp.com/"
+let localhost = 'http://localhost:8080/';
+let url = heroku
 //todo: misschien ook de knoppen in de filters, maar daar moet je nog ff over nadenken:
 
 function vraagOefeningenOp(oefening) {
-    return fetch('http://localhost:8080/restservices/oefeningen/' + oefening)
+    return fetch(url + 'restservices/oefeningen/' + oefening)
         .then(function (data) {
             return data.json()
         })
@@ -38,7 +43,7 @@ knopAlles.addEventListener('click', vraagAllesOp)
 function verstuurKnopDingen(event, x) {
     event.preventDefault()
     let data = {naam: x}
-    return fetch('http://localhost:8080/restservices/oefeningen/favoriet', {
+    return fetch(url + 'restservices/oefeningen/favoriet', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -125,7 +130,7 @@ knopFavorieten.addEventListener('click', e => {
 function verwijderOefening(event, x) {
     event.preventDefault()
     let data = {naam: x}
-    return fetch('http://localhost:8080/restservices/oefeningen/favoriet', {
+    return fetch(url + 'restservices/oefeningen/favoriet', {
         method: 'DELETE',
         body: JSON.stringify(data),
         headers: {

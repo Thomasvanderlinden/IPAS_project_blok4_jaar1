@@ -1,5 +1,10 @@
+let heroku = "https://ipasproject.herokuapp.com/"
+let localhost = 'http://localhost:8080/';
+let url =heroku
+
+
 function laatReceptenZien(){
-    return fetch('http://localhost:8080/restservices/voeding')
+    return fetch(url + 'restservices/voeding')
         .then(r => {return r.json()})
         .then(p => {return p})
 }

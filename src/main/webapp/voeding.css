@@ -73,7 +73,7 @@ ul {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: navy;
+    background-color: red;
     color: white;
 }
 

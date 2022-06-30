@@ -7,9 +7,10 @@ let knopBicep = document.getElementById('bicep')
 let knopTricep = document.getElementById('tricep')
 let knopFavorieten = document.getElementById('favorieten')
 
-//  vraag alle oefeningen op:
-function vraagAlleOefeningeOp() {
-    return fetch('http://localhost:8080/restservices/oefeningen')
+//todo: misschien ook de knoppen in de filters, maar daar moet je nog ff over nadenken:
+
+function vraagOefeningenOp(oefening) {
+    return fetch('http://localhost:8080/restservices/oefeningen/' + oefening)
         .then(function (data) {
             return data.json()
         })
@@ -18,21 +19,25 @@ function vraagAlleOefeningeOp() {
         })
 }
 
+function zetOefeningenOpPagina(oefeningen) {
+    lijstje.innerHTML = '';
+    for (let o of oefeningen) {
+        lijstje.innerHTML += `<div  id="divoefeningen" class="oefeningen">
+                                   <h2>${o.naam}</h2>
+                                   <p>${o.spiergroep}</p>
+                                   <img src="${o.plaatje}" width="130px" height="110px">
+                              </div>`
+    }
+}
+
+
 knopAlles.addEventListener('click', vraagAllesOp)
 
-function doeIets(event) {
-    event.preventDefault()
-    document.getElementById("popup-1").classList.toggle("active");
 
-}
 
 function verstuurKnopDingen(event, x) {
     event.preventDefault()
-
-
     let data = {naam: x}
-    console.log(x)
-
     return fetch('http://localhost:8080/restservices/oefeningen/favoriet', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -42,168 +47,83 @@ function verstuurKnopDingen(event, x) {
     })
 }
 
-
-function togglePopup(eve) {
-    eve.preventDefault()
-    document.getElementById("popup-1").classList.toggle("active");
-}
-
 function vraagAllesOp() {
-    vraagAlleOefeningeOp().then(oefeningen => {
+    vraagOefeningenOp("").then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
             lijstje.innerHTML += `
-
-
-
-<span id="divoefeningen">
-
+                                <span id="divoefeningen">
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
-                                   
                                    <button id="knop" onclick="verstuurKnopDingen(event, '${o.naam}')" ><img src="${o.plaatje}" width="130px" height="110px"></button>
 <!--                                   <button onclick="togglePopup(event)">beschrijving</button>-->
                               </span>`
         }
     })
 }
-
-//todo: kan evt het plaatje een knop maken
-
 vraagAllesOp()
 
 
-//vraag borst oefeningen op:
-function vraagOefeningeOpBorst() {
-    return fetch('http://localhost:8080/restservices/oefeningen/borst')
-        .then(function (data) {
-            return data.json()
-        })
-        .then(function (info) {
-            return info
-        })
-}
+//todo: popup dingen:
+//
+// function togglePopup(eve) {
+//     eve.preventDefault()
+//     document.getElementById("popup-1").classList.toggle("active");
+// }
+// function doeIets(event) {
+//     event.preventDefault()
+//     document.getElementById("popup-1").classList.toggle("active");
+// }
+
+
+
 
 knopBorst.addEventListener('click', e => {
     e.preventDefault()
-    let lijstje = document.getElementById('oefeningenLijst')
-
-    vraagOefeningeOpBorst().then(oefeningen => {
-        lijstje.innerHTML = '';
-        for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="divoefeningen" class="oefeningen">
-                                   <h2>${o.naam}</h2>
-                                   <p>${o.spiergroep}</p>
-                                   <img src="${o.plaatje}" width="130px" height="110px">
-                              </div>`
-        }
+    vraagOefeningenOp("borst").then(r => {
+        return zetOefeningenOpPagina(r)
     })
-
 })
-
-
-//vraag rug oefeningen op:
-function vraagOefeningeOpRug() {
-    return fetch('http://localhost:8080/restservices/oefeningen/rug')
-        .then(function (data) {
-            return data.json()
-        })
-        .then(function (info) {
-            return info
-        })
-}
 
 knopRug.addEventListener('click', e => {
     e.preventDefault()
-    let lijstje = document.getElementById('oefeningenLijst')
-
-    vraagOefeningeOpRug().then(oefeningen => {
-        lijstje.innerHTML = '';
-        for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="divoefeningen" class="oefeningen">
-                                   <h2>${o.naam}</h2>
-                                   <p>${o.spiergroep}</p>
-                                   <img src="${o.plaatje}" width="130px" height="110px">
-                              </div>`
-        }
+    vraagOefeningenOp("rug").then(r => {
+        return zetOefeningenOpPagina(r)
     })
-
 })
-
-
-//vraag bicep oefeningen op:
-function vraagOefeningeOpBicep() {
-    return fetch('http://localhost:8080/restservices/oefeningen/bicep')
-        .then(function (data) {
-            return data.json()
-        })
-        .then(function (info) {
-            return info
-        })
-}
 
 knopBicep.addEventListener('click', e => {
     e.preventDefault()
-    let lijstje = document.getElementById('oefeningenLijst')
-
-    vraagOefeningeOpBicep().then(oefeningen => {
-        lijstje.innerHTML = '';
-        for (let o of oefeningen) {
-            lijstje.innerHTML += `<div  id="divoefeningen" class="oefeningen">
-                                   <h2>${o.naam}</h2>
-                                   <p>${o.spiergroep}</p>
-                                   <img src="${o.plaatje}" width="130px" height="110px">
-                              </div>`
-        }
+    vraagOefeningenOp("bicep").then(r => {
+        return zetOefeningenOpPagina(r)
     })
-
 })
-
-
-//vraag tricep oefeningen op:
-function vraagOefeningeOpTricep() {
-    return fetch('http://localhost:8080/restservices/oefeningen/tricep')
-        .then(function (data) {
-            return data.json()
-        })
-        .then(function (info) {
-            return info
-        })
-}
 
 knopTricep.addEventListener('click', e => {
     e.preventDefault()
-    let lijstje = document.getElementById('oefeningenLijst')
+    vraagOefeningenOp("tricep").then(r => {
+        return zetOefeningenOpPagina(r)
+    })
+})
 
-    vraagOefeningeOpTricep().then(oefeningen => {
+knopFavorieten.addEventListener('click', e => {
+    e.preventDefault()
+    vraagOefeningenOp("favoriet").then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
-            lijstje.innerHTML += `<div  id="divoefeningen">
+            lijstje.innerHTML += `<div id="divoefeningen">
                                     <div class="oefeningen">
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
-                                        <img src="${o.plaatje}" width="130px" height="110px">
+                                        
+                                        <button onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
                                     </div>`
         }
     })
 })
 
-
-//vraag favorieten oefeningen op:
-function vraagOefeningeOpFavorieten() {
-    return fetch('http://localhost:8080/restservices/oefeningen/favoriet')
-        .then(function (data) {
-            return data.json()
-        })
-        .then(function (info) {
-            return info
-        })
-}
-
 function verwijderOefening(event, x) {
-    console.log(x)
     event.preventDefault()
-
     let data = {naam: x}
     return fetch('http://localhost:8080/restservices/oefeningen/favoriet', {
         method: 'DELETE',
@@ -216,29 +136,8 @@ function verwijderOefening(event, x) {
 
 }
 
-knopFavorieten.addEventListener('click', e => {
-    e.preventDefault()
-    let lijstje = document.getElementById('oefeningenLijst')
-
-    vraagOefeningeOpFavorieten().then(oefeningen => {
-        lijstje.innerHTML = '';
-        for (let o of oefeningen) {
-            lijstje.innerHTML += `<div id="divoefeningen">
-                                    <div class="oefeningen">
-                                        <h2>${o.naam}</h2>
-                                        <p>${o.spiergroep}</p>
-                                        
-                                        <button onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
-                                    </div>`
-        }
-    })
-
-})
-
 function verversPagina() {
-    let lijstje = document.getElementById('oefeningenLijst')
-
-    vraagOefeningeOpFavorieten().then(oefeningen => {
+    vraagOefeningenOp("favoriet").then(oefeningen => {
         lijstje.innerHTML = '';
         for (let o of oefeningen) {
             lijstje.innerHTML += `<div id="divoefeningen">
@@ -247,11 +146,10 @@ function verversPagina() {
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
                                         
-                                        <button type="button" onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
+                                        <button onclick="verwijderOefening(event, '${o.naam}' )"><img src="${o.plaatje}" width="130px" height="110px"></button>
                                     </div>`
         }
     })
-
 }
 
 

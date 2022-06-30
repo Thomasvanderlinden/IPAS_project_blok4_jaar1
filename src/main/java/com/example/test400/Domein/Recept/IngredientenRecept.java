@@ -4,7 +4,7 @@ public class IngredientenRecept {
     private String naam;
     private int hoeveelheid;
 
-    public IngredientenRecept(String naam, int hoeveelheid){
+    public IngredientenRecept(String naam, int hoeveelheid) {
         this.naam = naam;
         this.hoeveelheid = hoeveelheid;
     }

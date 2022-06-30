@@ -5,6 +5,8 @@ public class Mening {
     private String onderwerp;
     private String tekst;
 
+    //todo: onnodige getters en setters weghalen:
+
     public Mening(String naam, String onderwerp, String tekst){
         this.naam = naam;
         this.onderwerp = onderwerp;

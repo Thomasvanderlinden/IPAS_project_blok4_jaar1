@@ -9,12 +9,12 @@ function refresh() {
     if (service.isLoggedIn()) {
         document.forms.login.style = "display:none";
         document.forms.logout.style = "display:block";
-        document.forms.tipForumulier.style = "display:block";
+
 
     } else {
         document.forms.logout.style = "display:none";
         document.forms.login.style = "display:block";
-        document.forms.tipFormulier.style = "display:none";
+
     }
 }
 

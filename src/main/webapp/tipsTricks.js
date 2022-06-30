@@ -1,3 +1,20 @@
+let lijstje = document.getElementById('tipsTricksLijst')
+let knop = document.getElementById('opsturenTip')
+let formulier = document.querySelector('#tipFormulier')
+
+
+
+
+function loginMetFormulier() {
+    if (window.sessionStorage.getItem("myJWT")) {
+        document.forms.tipFormulier.style = "display:block";
+    } else {
+        document.forms.tipFormulier.style = "display:none";
+    }
+}
+loginMetFormulier()
+
+
 function vraagTipsTricksOp() {
     return fetch('http://localhost:8080/restservices/tipsTricks')
         .then(function (data) {
@@ -8,42 +25,44 @@ function vraagTipsTricksOp() {
         })
 }
 
-
-let lijstje = document.getElementById('tipsTricksLijst')
-
-vraagTipsTricksOp().then(tips => {
-    lijstje.innerHTML = '';
-    for (let t of tips) {
-        lijstje.innerHTML += `<div class="oefeningen">
+function geefTipsTricksInformatieWeer() {
+    vraagTipsTricksOp().then(tips => {
+        lijstje.innerHTML = '';
+        for (let t of tips) {
+            lijstje.innerHTML += `<div class="oefeningen">
                                    <h2>${t.tipnaam}</h2>
                                    <h3>${t.onderwerp}</h3>
                                    <p>${t.tekstVanDeTip}</p>
                                    <h4>${t.auteur}</h4> 
                               </div>`
-    }
-})
+        }
+    })
+}
 
-
-
-
-
-let knop = document.getElementById('opsturenTip')
-let formulier = document.querySelector('#tipFormulier')
+geefTipsTricksInformatieWeer()
 
 
 function versturenMaar(tip) {
+
+    if(tip.tipnaam === "" || tip.auteur === "" || tip.onderwerp === "" || tip.tekstVanDeTip === ""){
+        return alert("niet alle velden zijn ingevuld!")
+    }
+
+
+
+
+
     return fetch('http://localhost:8080/restservices/tipsTricks', {
         method: 'POST',
-        body : JSON.stringify(tip),
+        body: JSON.stringify(tip),
         headers: {
-            'Content-Type' : 'application/json', "Authorization": "Bearer " +window.sessionStorage.getItem("myJWT")
+            'Content-Type': 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
         }
-    })
+    }).then(geefTipsTricksInformatieWeer)
+        .catch(error => alert(error))
 
 }
 
-
-//todo: nog kijken of we de lijst kunnen laten 'refreshen' met een functie, --> koffiecrud:
 
 knop.addEventListener('click', r => {
     r.preventDefault()
@@ -59,6 +78,7 @@ knop.addEventListener('click', r => {
     versturenMaar(tip)
 
 })
+
 
 
 

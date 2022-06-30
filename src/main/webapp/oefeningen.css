@@ -35,6 +35,8 @@ body {
     background-color: black;
 }
 .itemSidebar li button{
+    position: relative;
+    right: 85px;
     padding: 40px 50px;
     font-size: 17px;
     color: white;
@@ -50,12 +52,6 @@ ul {
 
     color: black;
 }
-
-
-
-
-
-
 
 .ItemFooter {
     border-style: solid;

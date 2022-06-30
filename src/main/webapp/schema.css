@@ -28,7 +28,6 @@ body {
 }
 
 .itemSidebar {
-    border-style: solid;
     grid-column: 1/4;
     grid-row: 3;
 }
@@ -40,15 +39,12 @@ body {
 
 
 .itemSidebar {
-    background-color: #333;
 }
 
 .itemSidebar li {
-    background-color: #333;
 }
 
 .itemSidebar li button {
-    background-color: #333;
 }
 
 .itemSidebar li button {
@@ -145,6 +141,8 @@ p {
 
 /* Modal Content */
 .modal-content {
+    position: fixed;
+
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -193,7 +191,7 @@ h3 {
 
 }
 
-button{
+button {
     width: 350px;
     text-align: center;
 }
@@ -201,12 +199,41 @@ button{
 p {
     color: red;
 }
-.ItemFooter{
+
+.ItemFooter {
     text-align: center;
 }
-h6{
+
+h6 {
     color: red;
     text-align: center;
     font-size: 50px;
 }
 
+#gerechten {
+    position: relative;
+    text-align: center;
+
+}
+
+#eersteGerecht {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+
+}
+
+#tweedeGerecht {
+    display: inline-block;
+
+    width: 300px;
+    text-align: center;
+    /*border-style: solid;*/
+}
+
+#divoefeningen {
+    width: 200px;
+    alignment: right;
+    float: left;
+    border: 5px ;
+}

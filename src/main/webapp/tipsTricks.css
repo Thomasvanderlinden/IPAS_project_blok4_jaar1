@@ -43,15 +43,14 @@ body {
 .itemSidebar {
 }
 
-.itemSidebar li {
-}
-
-.itemSidebar li button {
+.itemSidebar li  button{
     background-color: black;
+
 }
 
-.itemSidebar li button {
-    padding: 14px 16px;
+.itemSidebar li button{
+    color: black;
+    padding: 40px 50px;
     font-size: 17px;
     color: white;
     text-decoration: none;
@@ -108,6 +107,7 @@ p {
 h1 {
     text-align: center;
     font-size: 60px;
+    color: white;
 }
 
 h2 {
@@ -139,7 +139,7 @@ h5 {
     padding: 20px 20px;
     border-style: solid;
     background-color: white;
-    opacity: 60%;
+    opacity: 70%;
     border-radius: 35px;
 
 }

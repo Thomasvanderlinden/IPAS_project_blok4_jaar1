@@ -3,7 +3,7 @@ let knop = document.getElementById('opsturenTip')
 let formulier = document.querySelector('#tipFormulier')
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = heroku
+let url = localhost
 
 function loginMetFormulier() {
     if (window.sessionStorage.getItem("myJWT")) {

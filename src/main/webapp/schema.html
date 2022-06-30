@@ -34,16 +34,21 @@
         <label id="labelLoseWeight" for="loseWeightButton">Lose Weight</label>
         <label id="labelGainMuscleMass" for="gainMuscleMassButton">Gain Muscle Mass</label>
 
-<!--        todo: deze plaatjes zijn nog niet goed ff fixen-->
-        <button id="gainMuscleMassButton"><img src="https://icon-library.com/images/gym-icon/gym-icon-3.jpg"></button>
-        <button id="loseWeightButton"><img src="https://icon-library.com/images/gym-icon/gym-icon-3.jpg"></button>
-        <button id="shredButton"><img src="https://icon-library.com/images/gym-icon/gym-icon-3.jpg"></button>
+        <!--        todo: deze plaatjes zijn nog niet goed ff fixen-->
+        <button id="gainMuscleMassButton"><img
+                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FHERO.png&w=128&q=75">
+        </button>
+        <button id="loseWeightButton"><img
+                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FSLIM_SHREDDED_BODY.png&w=128&q=75">
+        </button>
+        <button id="shredButton"><img
+                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FBEACH_BODY.png&w=128&q=75">
+        </button>
 
 
         <div id="myModalShredded" class="modal">
 
-<!--            todo: de options nog aanpassen, denk 3 andere oefeningen suggesteren:                 dddd                    dd                  dd
-ook de aanpaskno doet het nog niet-->
+            <!--            todo: de options nog aanpassen, denk 3 andere oefeningen suggesteren-->
 
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -178,13 +183,20 @@ ook de aanpaskno doet het nog niet-->
                         <td>2 min</td>
                     </tr>
                 </table>
+
+                <div>
+                    <button onclick="randomGerechten()">Laat gerechten zien</button>
+                </div>
+
+                <div>
+                    <ul id="lijstGerechten">
+
+                    </ul>
+                </div>
             </div>
+
+
         </div>
-
-
-
-
-
 
 
         <div id="myModalLoseWeight" class="modal">
@@ -294,13 +306,6 @@ ook de aanpaskno doet het nog niet-->
     </div>
 
 
-
-
-
-
-
-
-
     <div id="myModalGainMuscleMass" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -401,13 +406,11 @@ ook de aanpaskno doet het nog niet-->
 </div>
 
 
-
-
-    <div class="itemSidebar">
-    </div>
-    <div class="ItemFooter">
-        <p id="footerHome">NEVER GIVE UP</p>
-    </div>
+<div class="itemSidebar">
+</div>
+<div class="ItemFooter">
+    <p id="footerHome">NEVER GIVE UP</p>
+</div>
 
 </div>
 

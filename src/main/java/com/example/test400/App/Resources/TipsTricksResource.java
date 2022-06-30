@@ -5,6 +5,7 @@ import com.azure.core.annotation.Post;
 import com.example.test400.App.StartupListener;
 import com.example.test400.Domein.Tips.Tips;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -19,6 +20,7 @@ public class TipsTricksResource {
     }
 
     @POST
+    @RolesAllowed("gebruiker")
     @Produces("application/json")
     @Consumes("application/json")
     public Response tipsidk(Tips tips){

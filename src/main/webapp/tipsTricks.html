@@ -36,10 +36,18 @@
 
     <div class="itemSidebar">
         <ul>
-            <li><button>Mannen</button></li>
-            <li><button>Vrouwen</button></li>
-            <li><button>Eten</button></li>
-            <li><button>Sporten</button></li>
+            <li>
+                <button>Mannen</button>
+            </li>
+            <li>
+                <button>Vrouwen</button>
+            </li>
+            <li>
+                <button>Eten</button>
+            </li>
+            <li>
+                <button>Sporten</button>
+            </li>
 
         </ul>
 
@@ -47,24 +55,25 @@
     </div>
 
     <div class="ItemFooter">
-        <form id="tipFormulier">
-            <ul>
-                <li><input type="text" name="tipnaam" id="naamVeld"  placeholder="titel" style="width: 385px"></li>
+        <div class="formulierDiv">
+            <form name="tipFormulier" id="tipFormulier">
+                <input type="text" name="tipnaam" id="naamVeld" placeholder="titel" style="width: 385px">
 
-                <li><input type="text" name="onderwerp" id="onderwerpVeld"  placeholder="onderwerp" style="width: 385px"></li>
+                <input type="text" name="onderwerp" id="onderwerpVeld" placeholder="onderwerp"
+                       style="width: 385px">
 
-                <li><textarea id="tekst" name="tekstVanDeTip" placeholder="tekst" rows="4" cols="50" ></textarea></li>
+                <textarea id="tekst" name="tekstVanDeTip" placeholder="tekst" rows="4" cols="50"></textarea>
 
-                <li><input type="text" name="auteur" id="auteurVeld"  placeholder="auteur" style="width: 385px"></li>
+                <input type="text" name="auteur" id="auteurVeld" placeholder="auteur" style="width: 385px">
 
-                <li><button id="opsturenTip" value="Send Message">verstuur</button></li>
-            </ul>
-        </form>
+                <button id="opsturenTip" value="Send Message">verstuur</button>
 
+            </form>
+            <script src="login.js" type="module"></script>
+
+        </div>
     </div>
 
-</div>
-
-<script src="tipsTricks.js"></script>
+    <script src="tipsTricks.js"></script>
 </body>
 </html>

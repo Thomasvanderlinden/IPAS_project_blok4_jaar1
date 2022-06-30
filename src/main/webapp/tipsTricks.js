@@ -36,7 +36,7 @@ function versturenMaar(tip) {
         method: 'POST',
         body : JSON.stringify(tip),
         headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json', "Authorization": "Bearer " +window.sessionStorage.getItem("myJWT")
         }
     })
 

@@ -1,8 +1,5 @@
 import LoginService from "./loginService.js";
-
 let service = new LoginService();
-
-
 
 
 function refresh() {
@@ -10,14 +7,12 @@ function refresh() {
         document.forms.login.style = "display:none";
         document.forms.logout.style = "display:block";
 
-
     } else {
         document.forms.logout.style = "display:none";
         document.forms.login.style = "display:block";
 
     }
 }
-
 
 document.forms.login.addEventListener('submit', e => {
     e.preventDefault();
@@ -33,7 +28,6 @@ document.forms.logout.addEventListener('submit', e => {
         window.location.reload();
     });
 });
-
 refresh();
 
 service.getUser().then(user => {

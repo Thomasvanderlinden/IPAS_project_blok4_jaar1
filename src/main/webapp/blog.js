@@ -49,7 +49,6 @@ function versturenMeningNaarServer(mening) {
 }
 
 
-//todo: foutmeldingen als een veld leeg is bij blog op tips
 knop.addEventListener('click', r => {
     r.preventDefault()
 

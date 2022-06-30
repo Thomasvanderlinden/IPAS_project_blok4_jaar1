@@ -42,6 +42,5 @@ export default class LoginService {
 
     logout() {
         return Promise.resolve(window.sessionStorage.clear())
-
     }
 }

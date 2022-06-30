@@ -46,13 +46,12 @@ public class OefeningenResource {
         }
         return Response.ok(StartupListener.favorietenLijst).build();
     }
-    //todo: delete maken, verwijderen uit favorietenlijst:
 
 
     @DELETE
     @Path("favoriet")
     @Produces("application/json")
-    public Response verwijderFavoriet(Favoriet favoriet) {
+    public Response verwijderFavorietUitLijst(Favoriet favoriet) {
         for(Oefening o : StartupListener.favorietenLijst){
             if(o.getNaam().equals(favoriet.naam)){
                 StartupListener.favorietenLijst.remove(o);

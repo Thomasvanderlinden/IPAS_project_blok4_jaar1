@@ -68,19 +68,6 @@
 
 
 
-//
-// let inclinePress = document.getElementById('InclineBarbellBench Press')
-//
-//
-// inclinePress.options[1].disabled = true;
-// inclinePress.options[2].disabled = true;
-//
-//
-//
-// document.getElementById('knopShredded').addEventListener('click', e => {
-//         e.preventDefault()
-//         inclinePress.options[1].disabled = false
-//     }
-// )
+
 
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 .oefenContainer {
     display: grid;
     height: 100vh;
@@ -5,7 +7,6 @@
 
     gap: 24px;
 }
-
 
 .itemHeader {
     grid-column: 1/span 12;
@@ -30,18 +31,13 @@
 }
 
 
-.itemSidebar {
-}
-
-.itemSidebar li {
-}
-
 .itemSidebar li button {
     background-color: black;
 }
 
 .itemSidebar li button {
-    /*padding: 14px 16px;*/
+    position: relative;
+    right: 85px;
     padding: 40px 50px;
     font-size: 17px;
     color: white;
@@ -95,6 +91,7 @@ p {
 
 
 h1 {
+    padding: unset;
     text-align: center;
     color: white;
     font-size: 60px;
@@ -112,30 +109,78 @@ h2 {
     font-size: 25px;
     color: red;
     position: relative;
-text-align: center;
+    text-align: center;
     top: -20px;
-    
+
 }
-#informatie{
+
+#informatie {
     width: 300px;
     position: relative;
-    left : 700px;
+    left: 700px;
     top: 300px;
 
 }
-h5{
+
+h5 {
     position: relative;
-    left : 700px;
+    left: 700px;
     top: 300px;
     color: red;
 
 
 }
-#footerHome{
+
+#footerHome {
     text-align: center;
 }
-a{
 
+#username {
+    position: relative;
+    color: white;
 }
+#password{
+    position: relative;
+    color: white;
+}
+#myDIV{
+}
+
+
+
+#myDIV{
+    display: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+/*home page welcom logo*/
+.waviy {
+    position: relative;
+    right: 0;
+}
+
+
+.waviy span {
+    position: center;
+    display: flex;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 4s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg)
+    }
+}
+
+
 
 

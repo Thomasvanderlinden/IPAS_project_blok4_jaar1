@@ -2,9 +2,9 @@ package com.example.test400.Domein.Recept;
 
 public class IngredientenRecept {
     private String naam;
-    private int hoeveelheid;
+    private String hoeveelheid;
 
-    public IngredientenRecept(String naam, int hoeveelheid) {
+    public IngredientenRecept(String naam, String hoeveelheid) {
         this.naam = naam;
         this.hoeveelheid = hoeveelheid;
     }
@@ -18,11 +18,11 @@ public class IngredientenRecept {
         this.naam = naam;
     }
 
-    public int getHoeveelheid() {
+    public String getHoeveelheid() {
         return hoeveelheid;
     }
 
-    public void setHoeveelheid(int hoeveelheid) {
+    public void setHoeveelheid(String hoeveelheid) {
         this.hoeveelheid = hoeveelheid;
     }
 

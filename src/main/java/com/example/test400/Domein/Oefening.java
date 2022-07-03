@@ -8,6 +8,14 @@ public class Oefening {
     private String omschrijving;
     private String plaatje;
 
+    private static Oefening myOefening = new Oefening();
+    public static Oefening getOefening(){
+        return myOefening;
+    }
+    public static void setOefening(Oefening oefening){
+        myOefening = oefening;
+    }
+
     public Oefening(String naam, int tijd, int verbrande_kcal, String spiergroep, String omschrijving, String plaatje){
         this.naam = naam;
         this.tijd = tijd;
@@ -16,6 +24,9 @@ public class Oefening {
         this.omschrijving = omschrijving;
         this.plaatje = plaatje;
     }
+    public Oefening(){}
+
+
 
     public String getOmschrijving() {
         return omschrijving;

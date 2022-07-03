@@ -14,9 +14,6 @@ body {
     grid-column: 1/span 12;
 }
 
-.itemHeader {
-}
-
 .itemNavigation {
     grid-column: 1/span 12;;
 }
@@ -29,33 +26,8 @@ body {
 }
 
 .itemSidebar {
-    border-style: solid;
     grid-column: 1/4;
     grid-row: 3;
-}
-
-.itemSidebar {
-    position: relative;
-    width: 200px;
-}
-
-
-.itemSidebar {
-}
-
-.itemSidebar li  button{
-    background-color: black;
-
-}
-
-.itemSidebar li button{
-    color: black;
-    padding: 40px 50px;
-    font-size: 17px;
-    color: white;
-    text-decoration: none;
-    border: none;
-
 }
 
 ul {
@@ -67,14 +39,12 @@ ul {
     color: black;
 }
 
-
 .ItemFooter {
     border-style: solid;
     grid-column: 1/span 12;
 }
 
 .topnav {
-    background-color: #333;
     overflow: hidden;
 }
 
@@ -110,9 +80,8 @@ h1 {
     color: white;
 }
 
-h2 {
-}
-h3{
+
+h3 {
     font-size: 20px;
     font-family: Arial, monospace;
 }

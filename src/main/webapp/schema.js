@@ -58,28 +58,7 @@ window.onclick = function (event) {
     }
 }
 
-let gerechtenLijst = document.getElementById('lijstGerechten')
 
-function randomGerechten(gerecht){
-    return fetch('http://localhost:8080/restservices/' + gerecht)
-        .then(data =>{ return data.json()})
-        .then(r => {return r})
-}
-
-function vraagAllesOp() {
-    randomGerechten("voeding").then(gerecht => {
-        gerechtenLijst.innerHTML = '';
-        for (let g of gerecht) {
-            gerechtenLijst.innerHTML += `
-                               <div id="divoefeningen" >
-                                   <h2>${g.naam}</h2>
-                                   <p>${g.omschrijving}</p>
-                                   <img src="${g.plaatje}" height="100px" width="100px">
-                               </div>`
-        }
-    })
-}
-vraagAllesOp()
 
 
 

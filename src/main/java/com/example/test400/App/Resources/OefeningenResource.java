@@ -3,7 +3,6 @@ package com.example.test400.App.Resources;
 import com.example.test400.App.StartupListener;
 import com.example.test400.Domein.Favoriet;
 import com.example.test400.Domein.Oefening;
-import com.example.test400.Domein.Supplement.Supplement;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -20,11 +19,15 @@ public class OefeningenResource {
 
 
     @GET
+    @Path("{code}")
     @Produces("application/json")
-    @Path("/supplementen")
-    public List<Supplement> laatSupplementenZien() {
-        return StartupListener.supplementen;
-
+    public Response iets(@PathParam("code") String oefening) {
+        for (Oefening f : StartupListener.oefeningen) {
+            if (f.getNaam().equals(oefening)) {
+                return Response.ok(f).build();
+            }
+        }
+        return Response.status(404).entity("not found").build();
     }
 
 
@@ -39,8 +42,8 @@ public class OefeningenResource {
                 return Response.status(404).entity("already").build();
             }
         }
-        for(Oefening o : StartupListener.oefeningen){
-            if(o.getNaam().equals(favoriet.naam)){
+        for (Oefening o : StartupListener.oefeningen) {
+            if (o.getNaam().equals(favoriet.naam)) {
                 StartupListener.favorietenLijst.add(o);
             }
         }
@@ -52,8 +55,8 @@ public class OefeningenResource {
     @Path("favoriet")
     @Produces("application/json")
     public Response verwijderFavorietUitLijst(Favoriet favoriet) {
-        for(Oefening o : StartupListener.favorietenLijst){
-            if(o.getNaam().equals(favoriet.naam)){
+        for (Oefening o : StartupListener.favorietenLijst) {
+            if (o.getNaam().equals(favoriet.naam)) {
                 StartupListener.favorietenLijst.remove(o);
                 return Response.ok().build();
             }

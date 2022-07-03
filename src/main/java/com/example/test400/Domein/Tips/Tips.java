@@ -1,11 +1,21 @@
 package com.example.test400.Domein.Tips;
 
+import com.example.test400.App.StartupListener;
+import com.example.test400.Domein.Oefening;
+
 public class Tips {
     private String tipnaam;
     private String onderwerp;
     private String tekstVanDeTip;
     private String auteur;
 
+    private static Tips myTip = new Tips();
+    public static Tips getTips(){
+        return myTip;
+    }
+    public static void setTip(Tips tips){
+        myTip = tips;
+    }
     public Tips(String tipnaam,String onderwerp, String tekstVanDeTip, String auteur) {
         this.tipnaam = tipnaam;
         this.onderwerp = onderwerp;
@@ -13,7 +23,9 @@ public class Tips {
         this.auteur = auteur;
     }
 
-    public Tips(){}
+    public Tips(){
+        StartupListener.tipsTricks.add(new Tips("test", "Test", "test", "test"));
+    }
 
     public String getTipnaam() {
         return tipnaam;

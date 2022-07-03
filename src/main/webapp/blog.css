@@ -5,7 +5,6 @@
     gap: 24px;
 }
 
-
 .itemHeader {
     grid-column: 1/span 12;
 }
@@ -76,25 +75,6 @@ h1 {
     width: 200px;
 }
 
-.itemSidebar {
-}
-
-.itemSidebar li {
-}
-
-.itemSidebar li button {
-    background-color: black;
-
-}
-
-.itemSidebar li button {
-    padding: 40px 50px;
-    font-size: 17px;
-    color: white;
-    text-decoration: none;
-    border: none;
-
-}
 
 ul {
     list-style-type: none;

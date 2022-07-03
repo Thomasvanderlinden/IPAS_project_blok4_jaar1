@@ -83,15 +83,12 @@ h1 {
     font-size: 60px;
 }
 
-.itemHeader {
-}
 
-.itemMain {
-}
 body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
     position: relative;
 }
+
 h3 {
     font-size: 25px;
     color: red;
@@ -100,7 +97,8 @@ h3 {
     top: -20px;
 
 }
-.recepten{
+
+.recepten {
     width: 250px;
     height: 450px;
     display: inline-grid;
@@ -114,9 +112,6 @@ h3 {
     border-radius: 35px;
 }
 
-.gerecht{
-    color: white;
-}
 
 /*voor de terugknop links*/
 .itemSidebar {
@@ -145,19 +140,24 @@ h3 {
     color: white;
 }
 
-.gerecht{
+.gerecht {
+    color: black;
     width: 500px;
-    height: 550px;
+    height: auto;
     display: inline-grid;
     padding: 25px 25px;
     margin-bottom: 20px;
     margin-right: 10px;
     border-color: white;
     border-style: solid;
-    /*tekst kleur nog naar zwart doen*/
-    /*background-color: white;*/
-    /*opacity: 90%;*/
+    background-color: white;
+    opacity: 90%;
     border-radius: 35px;
+}
+
+
+button {
+    height: 20px;
 }
 
 

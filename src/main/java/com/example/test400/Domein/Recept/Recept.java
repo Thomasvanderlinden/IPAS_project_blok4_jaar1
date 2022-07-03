@@ -7,19 +7,45 @@ public class Recept {
     private int koolhydraten;
     private int eiwitten;
     private int vetten;
-    private ArrayList<IngredientenRecept> ingredienten = new ArrayList<>();
+    private ArrayList<IngredientenRecept> ingredienten;
     private String omschrijving;
     private String plaatje;
+    private String bereidingswijze;
 
-    public Recept(String naam,int energie, int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts, String omschrijving, String plaatje){
+    public Recept(String naam,int energie,   int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts,String bereidingswijze, String omschrijving, String plaatje){
         this.naam = naam;
         this.energie = energie;
+        this.bereidingswijze = bereidingswijze;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
         this.vetten = vetten;
         this.ingredienten = ingredientenRecepts;
         this.omschrijving = omschrijving;
         this.plaatje = plaatje;
+    }
+
+    public void setEnergie(int energie) {
+        this.energie = energie;
+    }
+
+    public void setIngredienten(ArrayList<IngredientenRecept> ingredienten) {
+        this.ingredienten = ingredienten;
+    }
+
+    public void setOmschrijving(String omschrijving) {
+        this.omschrijving = omschrijving;
+    }
+
+    public void setPlaatje(String plaatje) {
+        this.plaatje = plaatje;
+    }
+
+    public String getBereidingswijze() {
+        return bereidingswijze;
+    }
+
+    public void setBereidingswijze(String bereidingswijze) {
+        this.bereidingswijze = bereidingswijze;
     }
 
     public int getEnergie() {

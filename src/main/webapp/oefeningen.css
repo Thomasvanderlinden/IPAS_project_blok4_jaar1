@@ -43,6 +43,7 @@ body {
     text-decoration: none;
     border: none;
 
+
 }
 ul {
     list-style-type: none;
@@ -103,10 +104,7 @@ h2{
 p{
     text-align: center;
 }
-.itemHeader{
-}
-.itemMain{
-}
+
 
 .modal {
     display: none; /* Hidden by default */
@@ -212,12 +210,18 @@ body{
 }
 
 
-
 img{
+    display: flex;
+    alignment: center;
     border-radius: 10%;
 }
-button{
+#divoefeningen button{
+    position: relative;
+    right: 0;
+    top: 0;
+    color: black;
     border-radius: 10%;
+
 }
 h3 {
     font-size: 25px;

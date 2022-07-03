@@ -38,17 +38,16 @@ laatReceptenZien().then(recepten => {
 //http://jsfiddle.net/minitech/sTLbj/4/
 //https://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array
 function makeUL(array) {
-    let list = document.createElement('ul');
-
-    for (let i = 0; i < array.length; i++) {
-        let item = document.createElement('li');
-
-        item.appendChild(document.createTextNode(array[i]));
-
-        list.appendChild(item);
+    let list = document.createElement('div');
+    for (let i of array) {
+        let item = document.createElement('span');
+        item.innerHTML = i.naam +': ' +  i.hoeveelheid + `<br>`;
+        list.appendChild(item)
     }
+
     return list;
 }
+
 
 
 function geefGerechtInformatieWeer(gerecht) {
@@ -58,14 +57,17 @@ function geefGerechtInformatieWeer(gerecht) {
                                    <h2>${gerecht.naam}</h2>
                                    <p>${gerecht.omschrijving}</p>
                                    <img src="${gerecht.plaatje}"  height="250px" width="250px">
-                                   <p>energie: ${gerecht.energie}<br>
+                                   
+                                   <p><strong>VoedingsWaarden:</strong><br>
+                                   energie: ${gerecht.energie}<br>
                                     koolhydraten:  ${gerecht.koolhydraten}<br>
                                     eiwitten: ${gerecht.eiwitten}<br>
                                     vetten: ${gerecht.vetten}</p>
-                                   <div id="foo"></div>
+                                    
+                                    <p><strong>BereidingsWijze:</strong><br>${gerecht.bereidingswijze}</p>
+                                   <div id="foo"><strong>Ingredienten:</strong><br></div>
                               </div>`
-    document.getElementById('foo').appendChild(makeUL(gerecht));
-
+    document.getElementById('foo').appendChild(makeUL(gerecht.ingredienten));
 }
 
 

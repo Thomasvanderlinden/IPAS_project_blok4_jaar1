@@ -13,8 +13,23 @@ function loginMetFormulier() {
         document.forms.artikelForumuler.style = "display:none";
     }
 }
+
 loginMetFormulier()
 
+
+
+function makeUL(array) {
+    let list = document.createElement('ul');
+
+    for (let i = 0; i < array.length; i++) {
+        let item = document.createElement('li');
+
+        item.appendChild(document.createTextNode(array[i]));
+
+        list.appendChild(item);
+    }
+    return list;
+}
 
 function haalBlogOp() {
     return fetch(url + 'restservices/blog')
@@ -24,30 +39,37 @@ function haalBlogOp() {
         .then(j => {
             return j
         })
+        .then(r => {
+            geefBogInformatieWeer(r)
+        })
+}
+haalBlogOp()
+
+function geefBogInformatieWeer(artikel) {
+    lijstje.innerHTML = '';
+    lijstje.innerHTML += `
+<div class="blogArtikelen" 
+    <div id="fooo"> </div>
+</div>`
+    document.getElementById('fooo').appendChild(makeUL(artikel));
+
+
+
 }
 
-function geefBogInformatieWeer() {
-    haalBlogOp().then(x => {
-        lijstje.innerHTML = '';
-        for (let o of x) {
-            lijstje.innerHTML += `<div class="blogArtikelen" <li> <h2> ${o.naam}</h2> <h8> ${o.onderwerp}</h8> <p>${o.tekst}</p></li></div>`
-
-        }
-    })
-}
 geefBogInformatieWeer()
 //todo: misschien tips doen voor gebruikers en artikelen voor de admin:
 //todo: knop wit houden als je erop hebt gedrukt
 //todo: hier misschien nog auth invoeren:
 function versturenMeningNaarServer(mening) {
-    if(mening.naam === "" || mening.tekst === "" || mening.onderwerp === ""){
+    if (mening.naam === "" || mening.tekst === "" || mening.onderwerp === "") {
         return alert("niet alle velden zijn ingevuld!")
     }
     return fetch(url + 'restservices/blog', {
         method: 'POST',
         body: JSON.stringify(mening),
         headers: {
-            'Content-Type': 'application/json', "Authorization": "Bearer " +window.sessionStorage.getItem("myJWT")
+            'Content-Type': 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
         }
     }).then(geefBogInformatieWeer)
 }

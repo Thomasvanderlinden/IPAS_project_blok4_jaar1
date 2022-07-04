@@ -1,4 +1,4 @@
-.oefenContainer{
+.oefenContainer {
     display: grid;
     height: 100vh;
     grid-template-rows: auto auto 1fr auto auto auto;
@@ -9,32 +9,40 @@ body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
     position: relative;
 }
-.itemHeader{
+
+.itemHeader {
     grid-column: 1/span 12;
 }
-.itemNavigation{
-    grid-column:  1/span 12;;
- }
-.itemMain{
+
+.itemNavigation {
+    grid-column: 1/span 12;;
+}
+
+.itemMain {
     grid-column: 4/span 9;
 }
 
-.itemSidebar{
+.itemSidebar {
     grid-column: 1/4;
     grid-row: 3;
 }
-.itemSidebar{
+
+.itemSidebar {
     position: relative;
     width: 200px;
 }
-.itemSidebar{
+
+.itemSidebar {
 }
-.itemSidebar li{
+
+.itemSidebar li {
 }
-.itemSidebar li button{
+
+.itemSidebar li button {
     background-color: black;
 }
-.itemSidebar li button{
+
+.itemSidebar li button {
     position: relative;
     right: 85px;
     padding: 40px 50px;
@@ -45,9 +53,11 @@ body {
 
 
 }
+
 ul {
     list-style-type: none;
 }
+
 .itemSidebar li button:hover {
     background-color: #ddd;
 
@@ -58,6 +68,7 @@ ul {
     border-style: solid;
     grid-column: 1/span 12;
 }
+
 .topnav {
     overflow: hidden;
 }
@@ -85,23 +96,26 @@ ul {
 }
 
 
-h1{
+h1 {
     text-align: center;
     color: white;
     font-size: 60px;
 }
-.oefeningen{
+
+.oefeningen {
     /* border-style: dashed; */
     width: 200px;
     height: 250px;
     alignment: right;
     float: left;
-    border: 5px ;
+    border: 5px;
 }
-h2{
+
+h2 {
     text-align: center;
 }
-p{
+
+p {
     text-align: center;
 }
 
@@ -116,8 +130,8 @@ p{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -142,62 +156,65 @@ p{
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}.popup .overlay {
-     position:fixed;
-     top:0px;
-     left:0px;
-     width:100vw;
-     height:100vh;
-     background:rgba(0,0,0,0.7);
-     z-index:1;
-     display:none;
- }
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
 
 .popup .content {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%) scale(0);
-    background:#fff;
-    width:500px;
-    height:250px;
-    z-index:2;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
-    font-family:"Open Sans",sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 .popup .close-btn {
-    cursor:pointer;
-    position:absolute;
-    right:20px;
-    top:20px;
-    width:30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight:600;
-    line-height:30px;
-    text-align:center;
-    border-radius:50%;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .popup.active .overlay {
-    display:block;
+    display: block;
 }
 
 .popup.active .content {
-    transition:all 300ms ease-in-out;
-    transform:translate(-50%,-50%) scale(1);
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-body{
+body {
     background-color: black;
 }
+
 /*hier moet je zijn voor de indeling van de pagina*/
-#divoefeningen{
+#divoefeningen {
     display: inline-block;
     padding: 25px 25px;
     margin-bottom: 20px;
@@ -210,12 +227,13 @@ body{
 }
 
 
-img{
+img {
     display: flex;
     alignment: center;
     border-radius: 10%;
 }
-#divoefeningen button{
+
+#divoefeningen button {
     position: relative;
     right: 0;
     top: 0;
@@ -223,6 +241,7 @@ img{
     border-radius: 10%;
 
 }
+
 h3 {
     font-size: 25px;
     color: red;
@@ -232,6 +251,15 @@ h3 {
 
 }
 
-.bekijkoefeningknop{
+.bekijkoefeningknop {
     font-size: 18px;
 }
+
+.knop {
+    border: 2px solid green;
+
+}
+.verwijder{
+    border: 2px solid red;
+}
+

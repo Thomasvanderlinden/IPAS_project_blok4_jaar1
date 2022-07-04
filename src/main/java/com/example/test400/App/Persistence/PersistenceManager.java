@@ -26,12 +26,12 @@ public class PersistenceManager {
 
     public static void loadFromAzure() throws IOException, ClassNotFoundException {
         if (blobContainerClient.exists()) {
-            BlobClient blobClient = blobContainerClient.getBlobClient("ipas_blob");
+            BlobClient blobClientBlog = blobContainerClient.getBlobClient("blog_blob");
 
-            if (blobClient.exists()) {
+            if (blobClientBlog.exists()) {
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                blobClient.download(baos);
+                blobClientBlog.download(baos);
 
                 ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
                 ObjectInputStream ois = new ObjectInputStream(bais);
@@ -53,7 +53,7 @@ public class PersistenceManager {
         if (!blobContainerClient.exists())
             blobContainerClient.create();
 
-        BlobClient blobClient = blobContainerClient.getBlobClient("ipas_blob");
+        BlobClient blobClientBlog = blobContainerClient.getBlobClient("blog_blob");
         Blog blogToSave = Blog.getBlog();
 
 
@@ -66,7 +66,7 @@ public class PersistenceManager {
         byte[] bytez = baos.toByteArray();
 
         ByteArrayInputStream bais = new ByteArrayInputStream(bytez);
-        blobClient.upload(bais, bytez.length, true);
+        blobClientBlog.upload(bais, bytez.length, true);
 
         oos.close();
         bais.close();

@@ -4,12 +4,17 @@ import com.example.test400.App.StartupListener;
 import com.example.test400.Domein.Oefening;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Tips  {
+public class Tips implements Serializable {
     private String tipnaam;
     private String onderwerp;
     private String tekstVanDeTip;
     private String auteur;
+
+
+    public static ArrayList<Tips> alleTips;
 
     private static Tips myTip = new Tips();
     public static Tips getTips(){
@@ -25,9 +30,10 @@ public class Tips  {
         this.auteur = auteur;
     }
 
-    public Tips(){
-        StartupListener.tipsTricks.add(new Tips("test", "Test", "test", "test"));
-    }
+    public Tips(){}
+
+
+
 
     public String getTipnaam() {
         return tipnaam;
@@ -55,6 +61,22 @@ public class Tips  {
 
     public String getAuteur() {
         return auteur;
+    }
+
+    public ArrayList<Tips> getAlleTips() {
+        return alleTips;
+    }
+
+    public void setAlleTips(ArrayList<Tips> alleTips) {
+        this.alleTips = alleTips;
+    }
+
+    public static Tips getMyTip() {
+        return myTip;
+    }
+
+    public static void setMyTip(Tips myTip) {
+        Tips.myTip = myTip;
     }
 
     public void setAuteur(String auteur) {

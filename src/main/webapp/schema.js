@@ -58,8 +58,9 @@ window.onclick = function (event) {
     }
 }
 
-
-
+function printKnop(){
+    window.print()
+}
 
 
 

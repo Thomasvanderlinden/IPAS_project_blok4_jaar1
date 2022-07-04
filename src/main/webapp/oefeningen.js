@@ -96,7 +96,7 @@ function vraagAllesOp() {
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
-                                   <button id="knop" onclick="verstuurKnopDingen(event, '${o.naam}')" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzILTx5kgB2r7C2WkE0jFBndDjacCJeR0lg&usqp=CAU" width="20px he
+                                   <button class="knop" onclick="verstuurKnopDingen(event, '${o.naam}')" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzILTx5kgB2r7C2WkE0jFBndDjacCJeR0lg&usqp=CAU" width="20px he
                                    20px"></button>
                               </div>`
         }
@@ -106,16 +106,6 @@ function vraagAllesOp() {
 vraagAllesOp()
 
 
-//todo: popup dingen:
-//
-// function togglePopup(eve) {
-//     eve.preventDefault()
-//     document.getElementById("popup-1").classList.toggle("active");
-// }
-// function doeIets(event) {
-//     event.preventDefault()
-//     document.getElementById("popup-1").classList.toggle("active");
-// }
 
 
 knopBorst.addEventListener('click', e => {
@@ -156,7 +146,7 @@ knopFavorieten.addEventListener('click', e => {
                                         <h2>${o.naam}</h2>
                                         <p>${o.spiergroep}</p>
                                         <img src="${o.plaatje}" width="130px" height="110px">
-                                        <button onclick="verwijderOefening(event, '${o.naam}')"><img src="https://icon-library.com/images/remove-icon/remove-icon-9.jpg" width="20px" height="20px"></button>
+                                        <button class="verwijder" onclick="verwijderOefening(event, '${o.naam}')"><img src="https://icon-library.com/images/remove-icon/remove-icon-9.jpg" width="20px" height="20px"></button>
                                     </div>`
         }
     })

@@ -30,19 +30,15 @@
 
     <div class="itemMain">
 
-        <label id="labelShred" for="shredButton">Shredded</label>
-        <label id="labelLoseWeight" for="loseWeightButton">Lose Weight</label>
-        <label id="labelGainMuscleMass" for="gainMuscleMassButton">Gain Muscle Mass</label>
-
         <!--        todo: deze plaatjes zijn nog niet goed ff fixen-->
-        <button id="gainMuscleMassButton"><img
-                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FHERO.png&w=128&q=75">
+        <button id="gainMuscleMassButton" class="specifiek">Gain MUscle Mass<img
+                src="image%20(2).png">
         </button>
-        <button id="loseWeightButton"><img
-                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FSLIM_SHREDDED_BODY.png&w=128&q=75">
+        <button id="loseWeightButton" class="specifiek">Lose Weight<img
+                src="image.png">
         </button>
-        <button id="shredButton"><img
-                src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fassets%2FWT6jYjPS9PQwjq5ZvcBLS%2Fimages%2Fbody-muscles%2FBEACH_BODY.png&w=128&q=75">
+        <button id="shredButton" class="specifiek">Shredded<img
+                src="image (1).png">
         </button>
 
 
@@ -76,6 +72,8 @@
                         <td>
                             <select id="DumbbellFly">
                                 <option>Dumbbell Fly</option>
+                                <option>Cable fly</option>
+                                <option>Chest press</option>
                                 <option>een andere optie</option>
                             </select>
                         </td>
@@ -87,6 +85,8 @@
                         <td>
                             <select id="WeightedDip">
                                 <option>Weighted Dip</option>
+                                <option>Dip machine</option>
+                                <optio>Rope pulldown</optio>
                                 <option>een andere optie</option>
                             </select>
                         </td>
@@ -98,6 +98,8 @@
                         <td>
                             <select id="Pec-Deck">
                                 <option>Pec-Deck</option>
+                                <option>Face Pull</option>
+                                <option>Bent over rear delt</option>
                                 <option>een andere optie</option>
                             </select>
                         </td>
@@ -184,6 +186,7 @@
                     </tr>
                 </table>
 
+                <button class="printKnop" onclick="printKnop()">Print dit schema uit</button>
             </div>
         </div>
 
@@ -207,6 +210,8 @@
                     <td>
                         <select id="RowMachine">
                             <option>Row Machine</option>
+                            <option>Lat pulldown</option>
+                            <option>Cable row</option>
                             <option>een andere optie</option>
                         </select>
                     </td>
@@ -218,6 +223,7 @@
                     <td>
                         <select id="JumpRope">
                             <option>Jump Rope</option>
+                            <option>Hometrainer</option>
                             <option>een andere optie</option>
                         </select>
                     </td>
@@ -229,6 +235,7 @@
                     <td>
                         <select id="Burpees">
                             <option>Burpees</option>
+                            <option>Touwtje Springen</option>
                             <option>een andere optie</option>
                         </select>
                     </td>
@@ -292,6 +299,8 @@
                     <td>5 min</td>
                 </tr>
             </table>
+            <button class="printKnop" onclick="printKnop()">Print dit schema uit</button>
+
         </div>
     </div>
 
@@ -314,6 +323,8 @@
                 <td>
                     <select id="Deadlift1">
                         <option>Deadlift</option>
+                        <option>Romanian deadlift</option>
+                        <option>Bent over row</option>
                         <option>een andere optie</option>
                     </select>
                 </td>
@@ -325,6 +336,7 @@
                 <td>
                     <select id="Dips">
                         <option>Dips</option>
+                        <option>Weighted dips</option>
                         <option>een andere optie</option>
                     </select>
                 </td>
@@ -392,6 +404,9 @@
                 <td>2 min</td>
             </tr>
         </table>
+
+        <button class="printKnop" onclick="printKnop()">Print dit schema uit</button>
+
     </div>
 </div>
 

@@ -28,7 +28,7 @@ laatReceptenZien().then(recepten => {
                                    <h2>${r.naam}</h2>
                                    <p>${r.omschrijving}</p>
                                    <img src="${r.plaatje}" height="250px" width="250px">
-                                   <button onclick="vraagGerechtInformatieOp(event, '${r.naam}')">gerecht bekijken</button>
+                                   <button class="gerechtKnop" onclick="vraagGerechtInformatieOp(event, '${r.naam}')">gerecht bekijken</button>
                                   
                               </div>`
     }
@@ -59,10 +59,10 @@ function geefGerechtInformatieWeer(gerecht) {
                                    <img src="${gerecht.plaatje}"  height="250px" width="250px">
                                    
                                    <p><strong>VoedingsWaarden:</strong><br>
-                                   energie: ${gerecht.energie}<br>
-                                    koolhydraten:  ${gerecht.koolhydraten}<br>
-                                    eiwitten: ${gerecht.eiwitten}<br>
-                                    vetten: ${gerecht.vetten}</p>
+                                   kilocalorieën: ${gerecht.energie} per portie<br>
+                                    koolhydraten:  ${gerecht.koolhydraten} gram<br>
+                                    eiwitten: ${gerecht.eiwitten} gram<br>
+                                    vetten: ${gerecht.vetten} gram</p>
                                     
                                     <p><strong>BereidingsWijze:</strong><br>${gerecht.bereidingswijze}</p>
                                    <div id="foo"><strong>Ingredienten:</strong><br></div>

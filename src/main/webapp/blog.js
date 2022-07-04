@@ -45,7 +45,7 @@ function geefinfoWeer() {
             let naam = lijst[x]
 
             lijstje.innerHTML += `<div class="blogArtikelen">
-                                   <div id="foo"><strong>blogDingen:</strong><br></div>
+                                   <div id="foo"><strong>BlogArtikelen:</strong><br></div>
 </div>`
 
             document.getElementById('foo').appendChild(makeUL(naam));

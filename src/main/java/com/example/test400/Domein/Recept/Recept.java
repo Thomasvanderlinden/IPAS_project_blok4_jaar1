@@ -3,18 +3,19 @@ package com.example.test400.Domein.Recept;
 import java.util.ArrayList;
 public class Recept {
     private String naam;
-    private int energie;
+    private int kilocalorieën;
     private int koolhydraten;
     private int eiwitten;
+
     private int vetten;
     private ArrayList<IngredientenRecept> ingredienten;
     private String omschrijving;
     private String plaatje;
     private String bereidingswijze;
 
-    public Recept(String naam,int energie,   int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts,String bereidingswijze, String omschrijving, String plaatje){
+    public Recept(String naam,int kilocalorieën,   int koolhydraten, int eiwitten, int vetten, ArrayList<IngredientenRecept> ingredientenRecepts,String bereidingswijze, String omschrijving, String plaatje){
         this.naam = naam;
-        this.energie = energie;
+        this.kilocalorieën = kilocalorieën;
         this.bereidingswijze = bereidingswijze;
         this.koolhydraten = koolhydraten;
         this.eiwitten = eiwitten;
@@ -25,7 +26,7 @@ public class Recept {
     }
 
     public void setEnergie(int energie) {
-        this.energie = energie;
+        this.kilocalorieën = energie;
     }
 
     public void setIngredienten(ArrayList<IngredientenRecept> ingredienten) {
@@ -49,7 +50,7 @@ public class Recept {
     }
 
     public int getEnergie() {
-        return energie;
+        return kilocalorieën;
     }
 
     public String getPlaatje() {

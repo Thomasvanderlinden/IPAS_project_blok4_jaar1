@@ -129,13 +129,14 @@ p {
 
 /* Modal Content */
 .modal-content {
-    position: fixed;
+    position: center;
 
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: auto;
 }
 
 /* The Close Button */
@@ -223,5 +224,39 @@ h6 {
     width: 200px;
     alignment: right;
     float: left;
-    border: 5px ;
+    border: 5px;
 }
+
+.printKnop {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid #ff4742;
+    color: #ff4742;
+    background: 0 0;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    height: 42px;
+}
+
+.printKnop:hover {
+    background-color: red;
+    color: white;
+}
+
+#labelShred {
+    color: white;
+    position: relative;
+    top: 10%;
+    left: 25%;
+}
+
+.specifiek {
+    font-size: 20px;
+}
+
+
+

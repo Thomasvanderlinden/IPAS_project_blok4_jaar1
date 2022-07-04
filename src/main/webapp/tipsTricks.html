@@ -40,19 +40,22 @@
     <div class="ItemFooter">
         <div class="formulierDiv">
             <form name="tipFormulier" id="tipFormulier">
+                <ul>
+                    <li><input type="text" name="tipnaam" id="naamVeld" placeholder="titel" style="width: 80%"></li>
 
-                    <input type="text" name="tipnaam" id="naamVeld" placeholder="titel" style="width: 385px">
+                    <li><input type="text" name="onderwerp" id="onderwerpVeld" placeholder="onderwerp"
+                               style="width: 80%"></li>
 
-                    <input type="text" name="onderwerp" id="onderwerpVeld" placeholder="onderwerp"
-                           style="width: 385px">
+                    <li><textarea id="tekst" name="tekstVanDeTip" placeholder="tekst" rows="4"
+                                  style="width: 80%;"></textarea></li>
 
-                    <textarea id="tekst" name="tekstVanDeTip" placeholder="tekst" rows="4" cols="50"></textarea>
+                    <li><input type="text" name="auteur" id="auteurVeld" placeholder="auteur" style="width: 80%"></li>
 
-                    <input type="text" name="auteur" id="auteurVeld" placeholder="auteur" style="width: 385px">
+                    <li>
+                        <button id="opsturenTip" value="Send Message" >verstuur</button>
+                    </li>
 
-                    <button id="opsturenTip" value="Send Message">verstuur</button>
-
-
+                </ul>
             </form>
 
         </div>

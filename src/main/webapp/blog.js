@@ -40,10 +40,11 @@ function haalBlogOp() {
 
 function geefinfoWeer() {
     haalBlogOp().then(lijst => {
+        lijstje.innerHTML = ''
         for (let x of Object.keys(lijst)) {
             let naam = lijst[x]
 
-            lijstje.innerHTML += `<div class="test">
+            lijstje.innerHTML += `<div class="blogArtikelen">
                                    <div id="foo"><strong>blogDingen:</strong><br></div>
 </div>`
 
@@ -69,7 +70,7 @@ function versturenMeningNaarServer(mening) {
         headers: {
             'Content-Type': 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
         }
-    }).then(geefBogInformatieWeer)
+    }).then(geefinfoWeer)
 }
 
 

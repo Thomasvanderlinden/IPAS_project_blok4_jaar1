@@ -15,19 +15,14 @@ function loginMetFormulier() {
 }
 
 loginMetFormulier()
-
-
-
 function makeUL(array) {
-    let list = document.createElement('ul');
-
-    for (let i = 0; i < array.length; i++) {
-        let item = document.createElement('li');
-
-        item.appendChild(document.createTextNode(array[i]));
-
-        list.appendChild(item);
+    let list = document.createElement('div');
+    for (let i of array) {
+        let item = document.createElement('span');
+        item.innerHTML = `<h2>${i.naam}</h2>  <h2>${i.onderwerp}</h2>  <p>${i.tekst}</p> <br>`;
+        list.appendChild(item)
     }
+
     return list;
 }
 
@@ -39,25 +34,28 @@ function haalBlogOp() {
         .then(j => {
             return j
         })
-        .then(r => {
-            geefBogInformatieWeer(r)
-        })
-}
-haalBlogOp()
 
-function geefBogInformatieWeer(artikel) {
-    lijstje.innerHTML = '';
-    lijstje.innerHTML += `
-<div class="blogArtikelen" 
-    <div id="fooo"> </div>
+}
+
+
+function geefinfoWeer() {
+    haalBlogOp().then(lijst => {
+        for (let x of Object.keys(lijst)) {
+            let naam = lijst[x]
+
+            lijstje.innerHTML += `<div class="test">
+                                   <div id="foo"><strong>blogDingen:</strong><br></div>
 </div>`
-    document.getElementById('fooo').appendChild(makeUL(artikel));
 
-
-
+            document.getElementById('foo').appendChild(makeUL(naam));
+        }
+    })
 }
 
-geefBogInformatieWeer()
+
+geefinfoWeer()
+
+
 //todo: misschien tips doen voor gebruikers en artikelen voor de admin:
 //todo: knop wit houden als je erop hebt gedrukt
 //todo: hier misschien nog auth invoeren:

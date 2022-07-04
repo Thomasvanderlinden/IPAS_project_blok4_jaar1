@@ -1,6 +1,8 @@
 package com.example.test400.Domein.Blog;
 
-public class Mening {
+import java.io.Serializable;
+
+public class Mening implements Serializable {
     private String naam;
     private String onderwerp;
     private String tekst;

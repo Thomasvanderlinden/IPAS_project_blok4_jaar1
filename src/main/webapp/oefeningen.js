@@ -66,7 +66,7 @@ function zetOefeningenOpPagina(oefeningen) {
                                    <h2>${o.naam}</h2>
                                    <p>${o.spiergroep}</p>
                                    <img src="${o.plaatje}" width="130px" height="110px">
-                                   <button onclick="vraagOefeningInformatieOp(event, '${o.naam}')"> bekijk oefening</button>
+                                   <button class="bekijkoefeningknop" onclick="vraagOefeningInformatieOp(event, '${o.naam}')"> bekijk oefening</button>
                               </div>`
     }
 }

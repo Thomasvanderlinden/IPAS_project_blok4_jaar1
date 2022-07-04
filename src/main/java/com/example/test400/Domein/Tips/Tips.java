@@ -3,7 +3,9 @@ package com.example.test400.Domein.Tips;
 import com.example.test400.App.StartupListener;
 import com.example.test400.Domein.Oefening;
 
-public class Tips {
+import java.io.Serializable;
+
+public class Tips  {
     private String tipnaam;
     private String onderwerp;
     private String tekstVanDeTip;
@@ -13,7 +15,7 @@ public class Tips {
     public static Tips getTips(){
         return myTip;
     }
-    public static void setTip(Tips tips){
+    public static void setTips(Tips tips){
         myTip = tips;
     }
     public Tips(String tipnaam,String onderwerp, String tekstVanDeTip, String auteur) {

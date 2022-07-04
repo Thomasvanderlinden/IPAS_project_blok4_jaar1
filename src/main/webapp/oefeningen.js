@@ -27,7 +27,7 @@ function vraagOefeningenOp(oefening) {
 function fietsHetErin(oefening) {
     lijstje.innerHTML = '';
     lijstje.innerHTML += `
-                              <div id="divoefeningen" ">
+                              <div id="divoefeningen1" ">
                                    <h2>${oefening.naam}</h2>
                                    <p>${oefening.omschrijving}</p>
                                    <img src="${oefening.plaatje}"  height="250px" width="250px">
@@ -152,9 +152,9 @@ knopFavorieten.addEventListener('click', e => {
     })
 })
 
-function verwijderOefening(event, x) {
+function verwijderOefening(event, oefening) {
     event.preventDefault()
-    let data = {naam: x}
+    let data = {naam: oefening}
     return fetch(url + 'restservices/oefeningen/favoriet', {
         method: 'DELETE',
         body: JSON.stringify(data),

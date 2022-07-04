@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class StartupListener implements ServletContextListener {
 
     public static ArrayList<Oefening> oefeningen = new ArrayList<>();
-    public static ArrayList<Mening> blogArtikelen = new ArrayList<>();
     public static ArrayList<Recept> recepten = new ArrayList<>();
     public static ArrayList<Tips> tipsTricks = new ArrayList<>();
 
@@ -107,7 +106,7 @@ public class StartupListener implements ServletContextListener {
         recepten.add(r2);
         recepten.add(r3);
         recepten.add(r4);
-        
+
 
         try {
             PersistenceManager.loadFromAzure();
@@ -205,14 +204,6 @@ public class StartupListener implements ServletContextListener {
         tipsTricks.add(t1);
         tipsTricks.add(t2);
         tipsTricks.add(t3);
-//        Tips.alleTips.add(t1);
-//        Tips.alleTips.add(t2);
-//        Tips.alleTips.add(t3);
-
-
-//mening maken:
-//        blogArtikelen.add(new Mening("Artikel 1", "Wat als alles anders gaat", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
-//        blogArtikelen.add(new Mening("Artikel 2", "Wat als alles anders gaat", "SEO Company BrightEdge unveiled new research findings on the performance of Organic and " + "Paid Search as a marketing channel. The strength of search marketing  Organic Search and Paid Search - " + "is clear. Organic Search remains the dominant source of trackable web traffic and in the dominant position as a channel." + " Paid Search continues to grow. Organic Social Media is flat since 2014at 5 %, and though ubiquitous, contributes on average" + " 1 / 3as much traffic as Paid Search and just 1 / 11as much as Organic Search. Read the report to find out why the Organic " + "Channel grew and what this means for your business. " + "Download the full report to see how organic channel share has continued to dominate year afteryear."));
 
 
     }

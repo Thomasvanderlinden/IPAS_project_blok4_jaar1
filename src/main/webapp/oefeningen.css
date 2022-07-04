@@ -225,7 +225,18 @@ body {
     opacity: 90%;
     border-radius: 35px;
 }
-
+#divoefeningen1 {
+    display: inline-block;
+    width: 400px;
+    padding: 25px 25px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 35px;
+}
 
 img {
     display: flex;
@@ -241,6 +252,8 @@ img {
     border-radius: 10%;
 
 }
+
+
 
 h3 {
     font-size: 25px;
@@ -262,4 +275,6 @@ h3 {
 .verwijder{
     border: 2px solid red;
 }
+
+
 

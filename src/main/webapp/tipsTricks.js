@@ -35,12 +35,27 @@ function geefTipsTricksInformatieWeer() {
                                    <h3>${t.onderwerp}</h3>
                                    <p>${t.tekstVanDeTip}</p>
                                    <h4>${t.auteur}</h4> 
+                                   <button class="verwijderTip" onclick="verwijderTips(event, '${t.tipnaam}')">verwijder tip</button>
                               </div>`
         }
     })
 }
 
 geefTipsTricksInformatieWeer()
+
+
+function verwijderTips(event, tip){
+    event.preventDefault()
+    let data = {tipnaam: tip}
+    return fetch(url + "restservices/tipsTricks/tip", {
+        method: 'DELETE',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type' : 'application/json'
+        }
+    }).then(geefTipsTricksInformatieWeer)
+}
+
 
 
 function versturenMaar(tip) {

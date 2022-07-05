@@ -4,7 +4,7 @@ let localhost = 'http://localhost:8080/';
 let url = localhost
 
 
-function makeUL(array) {
+function convert(array) {
     let list = document.createElement('div');
     for (let i of array) {
         let item = document.createElement('span');
@@ -22,11 +22,9 @@ function haalBlogOp() {
         .then(j => {
             return j
         })
-
 }
 
-
-function geefinfoWeer() {
+function geefBlogInfoWeer() {
     haalBlogOp().then(lijst => {
         lijstje.innerHTML = ''
         for (let x of Object.keys(lijst)) {
@@ -36,12 +34,11 @@ function geefinfoWeer() {
                                    <div id="foo"><br></div>
                                     </div>`
 
-            document.getElementById('foo').appendChild(makeUL(naam));
+            document.getElementById('foo').appendChild(convert(naam));
         }
     })
 }
 
-
-geefinfoWeer()
+geefBlogInfoWeer()
 
 

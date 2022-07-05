@@ -2,8 +2,11 @@ let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
 let url = localhost
 
+let lijstje = document.getElementById('receptenLijst')
 
-function laatReceptenZien() {
+
+
+function haalReceptenOp() {
     return fetch(url + 'restservices/voeding')
         .then(r => {
             return r.json()
@@ -13,47 +16,47 @@ function laatReceptenZien() {
         })
 }
 
-laatReceptenZien()
+function haalReceptInformatieOp(event, naam) {
+    event.preventDefault()
+    return fetch(url + 'restservices/voeding/' + naam)
+        .then(r => {
+            return r.json()
+        })
+        .then(j => {
+            return j
+        })
+        .then(f => laatGerechtInfoZien(f))
+}
 
 
-let lijstje = document.getElementById('receptenLijst')
-
-
-laatReceptenZien().then(recepten => {
+haalReceptenOp().then(recepten => {
     lijstje.innerHTML = '';
     for (let r of recepten) {
         lijstje.innerHTML += `
-
                               <div class="recepten">
                                    <h2>${r.naam}</h2>
                                    <p>${r.omschrijving}</p>
                                    <img src="${r.plaatje}" height="250px" width="250px">
-                                   <button class="gerechtKnop" onclick="vraagGerechtInformatieOp(event, '${r.naam}')">gerecht bekijken</button>
+                                   <button class="gerechtKnop" onclick="haalReceptInformatieOp(event, '${r.naam}')">gerecht bekijken</button>
                                   
                               </div>`
     }
 })
 
-//todo: dit nog weghalen hoor:
-//http://jsfiddle.net/minitech/sTLbj/4/
-//https://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array
-function makeUL(array) {
+
+function verander(array) {
     let list = document.createElement('div');
     for (let i of array) {
         let item = document.createElement('span');
-        item.innerHTML = i.naam +': ' +  i.hoeveelheid + `<br>`;
+        item.innerHTML = i.naam + ': ' + i.hoeveelheid + `<br>`;
         list.appendChild(item)
     }
 
     return list;
 }
 
-function printuit(stukkie){
-    let stuk = document.getElementById(stukkie)
-    window.print('gerecht')
-}
 
-function geefGerechtInformatieWeer(gerecht) {
+function laatGerechtInfoZien(gerecht) {
     lijstje.innerHTML = '';
     lijstje.innerHTML += `
                               <div class="gerecht" id="gerecht">
@@ -69,24 +72,15 @@ function geefGerechtInformatieWeer(gerecht) {
                                     
                                     <p><strong>BereidingsWijze:</strong><br>${gerecht.bereidingswijze}</p>
                                    <div id="foo"><strong>Ingredienten:</strong><br></div>
-                                   <button onclick="printuit('gerecht')">print</button>
+                                   <button onclick="printuit()">print</button>
                               </div>`
-    document.getElementById('foo').appendChild(makeUL(gerecht.ingredienten));
+
+    document.getElementById('foo').appendChild(verander(gerecht.ingredienten));
 }
 
-
-function vraagGerechtInformatieOp(event, naam) {
-    event.preventDefault()
-    return fetch(url + 'restservices/voeding/' + naam)
-        .then(r => {
-            return r.json()
-        })
-        .then(j => {
-            return j
-        })
-        .then(f => geefGerechtInformatieWeer(f))
-
-
+function printuit() {
+    window.print('gerecht')
 }
+
 
 

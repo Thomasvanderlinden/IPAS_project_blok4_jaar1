@@ -102,6 +102,7 @@ h1 {
 /*}*/
 body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
+    background-position: top;
     position: relative;
 }
 

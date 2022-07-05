@@ -7,13 +7,12 @@ let knopBicep = document.getElementById('bicep')
 let knopTricep = document.getElementById('tricep')
 let knopFavorieten = document.getElementById('favorieten')
 
-
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
 let url = localhost
 
-//todo: misschien ook de knoppen in de filters, maar daar moet je nog ff over nadenken:
 
+//deze is hoort bij de favorietenknop
 function vraagOefeningenOp(oefening) {
     return fetch(url + 'restservices/oefeningen/' + oefening)
         .then(function (data) {
@@ -24,6 +23,9 @@ function vraagOefeningenOp(oefening) {
         })
 }
 
+
+
+//deze 2 vragen specitieke oefening data op en plaatsen het op de pagina:
 function fietsHetErin(oefening) {
     lijstje.innerHTML = '';
     lijstje.innerHTML += `
@@ -37,8 +39,6 @@ function fietsHetErin(oefening) {
                                    </p>
                               </div>`
 }
-
-
 function vraagOefeningInformatieOp(event, oefening) {
     event.preventDefault()
     return fetch(url + 'restservices/oefeningen/' + oefening)
@@ -51,6 +51,8 @@ function vraagOefeningInformatieOp(event, oefening) {
 }
 
 
+
+//deze is voor de filters
 function zetOefeningenOpPagina(oefeningen) {
     lijstje.innerHTML = '';
     for (let o of oefeningen) {
@@ -64,9 +66,8 @@ function zetOefeningenOpPagina(oefeningen) {
 }
 
 
-knopAlles.addEventListener('click', vraagAllesOp)
 
-
+//deze zet een oefening in de favorietenlijst:
 function verstuurKnopDingen(event, x) {
     event.preventDefault()
     let data = {naam: x}
@@ -79,8 +80,7 @@ function verstuurKnopDingen(event, x) {
     }).then(response => response.json())
         .catch(error => alert("oefening staat al in je favorieten"))
 }
-
-
+//deze zorgt voor het gele sterretje, dus hier staat de knop die de favorieten toevoegd
 function vraagAllesOp() {
     vraagOefeningenOp("").then(oefeningen => {
         lijstje.innerHTML = '';
@@ -96,8 +96,10 @@ function vraagAllesOp() {
         }
     })
 }
-
 vraagAllesOp()
+knopAlles.addEventListener('click', vraagAllesOp)
+
+
 
 
 knopBorst.addEventListener('click', e => {
@@ -128,6 +130,8 @@ knopTricep.addEventListener('click', e => {
     })
 })
 
+
+//deze maakt de favorietenlijst met de verwijderknop
 knopFavorieten.addEventListener('click', e => {
     e.preventDefault()
     vraagOefeningenOp("favoriet").then(oefeningen => {
@@ -143,7 +147,7 @@ knopFavorieten.addEventListener('click', e => {
         }
     })
 })
-
+//deze verwijderd de oefening uit de lijst
 function verwijderOefening(event, oefening) {
     event.preventDefault()
     let data = {naam: oefening}
@@ -159,6 +163,8 @@ function verwijderOefening(event, oefening) {
 
 }
 
+
+//hiermee kan je de pagina verversen
 function verversPagina() {
     vraagOefeningenOp("favoriet").then(oefeningen => {
         lijstje.innerHTML = '';

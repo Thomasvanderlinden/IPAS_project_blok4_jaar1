@@ -2,16 +2,12 @@ let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
 let url = localhost
 export default class LoginService {
-
-
     token = '...'
-
 
     isLoggedIn() {
         if (window.sessionStorage.getItem("myJWT")) return true;
         else return false;
     }
-
 
     login(username, password) {
         let bodyCredentials = {username, password}
@@ -32,7 +28,6 @@ export default class LoginService {
         }).then(j => {
             window.sessionStorage.setItem("myJWT", j.token);
         }).catch(() => alert("geen juiste inloggegevens ingevuld"))
-
     }
 
 

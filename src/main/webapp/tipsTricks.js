@@ -51,7 +51,7 @@ function verwijderTips(event, tip){
         method: 'DELETE',
         body: JSON.stringify(data),
         headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
         }
     }).then(geefTipsTricksInformatieWeer)
 }

@@ -42,3 +42,48 @@ function geefBlogInfoWeer() {
 geefBlogInfoWeer()
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let knop = document.getElementById('opsturenBlog')
+let formulier = document.querySelector('#artikelForumuler')
+
+
+function loginMetFormulier() {
+    if (window.sessionStorage.getItem("myJWT")) {
+        document.forms.artikelForumuler.style = "display:block";
+    } else {
+        document.forms.artikelForumuler.style = "display:none";
+    }
+}
+
+loginMetFormulier()
+
+
+function versturenMeningNaarServer(mening) {
+    if (mening.naam === "" || mening.tekst === "" || mening.onderwerp === "") {
+        return alert("niet alle velden zijn ingevuld!")
+    }
+    return fetch(url + 'restservices/blog', {
+        method: 'POST',
+        body: JSON.stringify(mening),
+        headers: {
+            'Content-Type': 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
+        }
+    }).then(geefBlogInfoWeer)
+}
+
+
+knop.addEventListener('click', r => {
+    r.preventDefault()
+
+    let rauweData = new FormData(formulier)
+
+    let mening = {
+        naam: rauweData.get('naam'),
+        onderwerp: rauweData.get('onderwerp'),
+        tekst: rauweData.get('tekst')
+    }
+    versturenMeningNaarServer(mening)
+
+})
+
+

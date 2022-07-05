@@ -10,7 +10,7 @@ let knopFavorieten = document.getElementById('favorieten')
 
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 
 //todo: misschien ook de knoppen in de filters, maar daar moet je nog ff over nadenken:
 

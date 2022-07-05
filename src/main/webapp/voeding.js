@@ -1,6 +1,6 @@
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 
 
 function laatReceptenZien() {
@@ -48,12 +48,15 @@ function makeUL(array) {
     return list;
 }
 
-
+function printuit(stukkie){
+    let stuk = document.getElementById(stukkie)
+    window.print('gerecht')
+}
 
 function geefGerechtInformatieWeer(gerecht) {
     lijstje.innerHTML = '';
     lijstje.innerHTML += `
-                              <div class="gerecht">
+                              <div class="gerecht" id="gerecht">
                                    <h2>${gerecht.naam}</h2>
                                    <p>${gerecht.omschrijving}</p>
                                    <img src="${gerecht.plaatje}"  height="250px" width="250px">
@@ -66,6 +69,7 @@ function geefGerechtInformatieWeer(gerecht) {
                                     
                                     <p><strong>BereidingsWijze:</strong><br>${gerecht.bereidingswijze}</p>
                                    <div id="foo"><strong>Ingredienten:</strong><br></div>
+                                   <button onclick="printuit('gerecht')">print</button>
                               </div>`
     document.getElementById('foo').appendChild(makeUL(gerecht.ingredienten));
 }

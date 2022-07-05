@@ -3,7 +3,7 @@ let knop = document.getElementById('opsturenBlog')
 let formulier = document.querySelector('#artikelForumuler')
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 
 
 function loginMetFormulier() {
@@ -45,7 +45,7 @@ function geefinfoWeer() {
             let naam = lijst[x]
 
             lijstje.innerHTML += `<div class="blogArtikelen">
-                                   <div id="foo"><strong>BlogArtikelen:</strong><br></div>
+                                   <div id="foo"><br></div>
 </div>`
 
             document.getElementById('foo').appendChild(makeUL(naam));

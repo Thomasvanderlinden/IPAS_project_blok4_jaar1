@@ -1,9 +1,7 @@
 package com.example.test400.App.Resources;
 
-import com.azure.core.annotation.Get;
-import com.azure.core.annotation.Post;
 import com.example.test400.App.StartupListener;
-import com.example.test400.App.TipVerwijder;
+import com.example.test400.Domein.TipVerwijder;
 import com.example.test400.Domein.Tips.Tips;
 
 import javax.annotation.security.RolesAllowed;
@@ -30,8 +28,7 @@ public class TipsTricksResource {
     }
 
     @DELETE
-    @Path("tip")
-    //todo: @RolesAllowed moet nog
+    @RolesAllowed("gebruiker")
     @Produces("application/json")
     public Response verwijderTip(TipVerwijder tip) {
         for (Tips t : StartupListener.tipsTricks) {

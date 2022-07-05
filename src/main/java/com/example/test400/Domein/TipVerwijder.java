@@ -1,4 +1,4 @@
-package com.example.test400.App;
+package com.example.test400.Domein;
 
 public class TipVerwijder {
     public String tipnaam;

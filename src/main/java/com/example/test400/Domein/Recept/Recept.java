@@ -6,7 +6,6 @@ public class Recept {
     private int kilocalorieën;
     private int koolhydraten;
     private int eiwitten;
-
     private int vetten;
     private ArrayList<IngredientenRecept> ingredienten;
     private String omschrijving;

@@ -1,6 +1,10 @@
 package com.example.test400.Domein;
 
 public class Tekstvoorblog {
+
+
+
+    //dit is puur omdat er anders in mn startupListener een enorme string staat waardoor het niet meer duidelijk en overzichtelijk is:
     public static String tekstArtikel1 = "Joanna is 25 jaar. Ze komt uit een stabiel gezin, eet goed en beschrijft haar fysieke conditie als uitstekend. Nou ja, op een recente blessure na dan. Tijdens een Jiujitsu-training bezeerde ze haar arm. De zelfverdedigingssport is het belangrijkste in haar leven. Na het winnen van een wedstrijd voelt ze zich high. Ze zit iedere dag zes uur in de sportschool. Als ze een training mist, doet ze later een extra lange sessie om te compenseren.\n" +
             "\n" +
             "Haar blessure hield lang aan, omdat ze te snel weer begon met Jiujitsu. Ze ging in tegen het advies van haar arts om tijdelijk te stoppen. Maar als ze langer dan een dag niet kan sporten, voelt ze zich misselijk. Leren lukt ook alleen na een bezoek aan de sportschool. Haar vriendje verbrak de relatie vanwege haar strenge sportregime. Joanne probeert haar trainingsschema terug te brengen. Zonder succes. Ook al beschrijft ze zichzelf niet als ‘verslaafd’, ze realiseert zich dat ze een probleem heeft.\n" +

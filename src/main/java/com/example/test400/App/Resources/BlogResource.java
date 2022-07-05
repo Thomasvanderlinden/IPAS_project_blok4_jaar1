@@ -20,7 +20,7 @@ public class BlogResource {
     }
 
     @POST
-    //@RolesAllowed("gebruiker")
+    @RolesAllowed("gebruiker")
     @Produces("application/json")
     @Consumes("application/json")
     public Response verstuurInformatie(Mening mening) {

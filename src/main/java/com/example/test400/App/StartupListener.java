@@ -123,10 +123,20 @@ public class StartupListener implements ServletContextListener {
                 " naar voren en binnen te trekken. De triceps worden ingezet om de armen te strekken. " +
                 "Spieren in de schouders, rug en onderrug werken mee om je lichaam te stabiliseren.", "https://upload.wikimedia.org/wikipedia/commons/8/86/Incline-bench-press-1.png");
         oefeningen.add(o1);
-        //todo: er zit ergens iets fout bij de fly
-        Oefening o2 = new Oefening("fly's", 15, 300, "borst", "fly omschrijving", "https://i.pinimg.com/474x/89/d4/92/89d492813187786c6e293d2c4b1a99e1--chest-routine-kylie-jenner.jpg");
+        Oefening o2 = new Oefening("fly s", 15, 300, "borst", "Ga op een fitessbankje liggen en plaats je voeten naast het bankje zodat je stabiel ligt.\n" +
+                "Span je buik- en bilspieren aan en adem in.\n" +
+                "Breng de gewichten boven je.\n" +
+                "Adem in en laat de dumbbells tot de horizontale positie naast je zakken.\n" +
+                "Let daarbij erop dat de armen licht gebogen zijn.\n" +
+                "Breng de dumbbells weer omhoog en adem uit als de gewichten boven je schouders zijn.\n" +
+                "Knijp de borstspier samen als het gewicht zich boven je bevindt. Hierdoor leg je de nadruk op het binnenste deel van de grote borstspier.\n" +
+                "Gebruik geen zware gewichten, maar houdt bijvoorbeeld het gewicht op de onderste positie een seconde vast om te zorgen voor extra spierprikkel om de borstspier nog meer te belasten.", "https://i.pinimg.com/474x/89/d4/92/89d492813187786c6e293d2c4b1a99e1--chest-routine-kylie-jenner.jpg");
         oefeningen.add(o2);
-        Oefening o3 = new Oefening("bicep-curl", 10, 75, "bicep", "Dumbbell curls is een oefening die vaak door krachtsporters zoals bij bodybuilding, powerlifting, krachttraining, fitness en andere sporten wordt gebruikt ter versterking of vergroting van vooral de biceps (musculus biceps brachii). Deze spiergroep wordt in de volksmond ook wel 'spierbal' of 'spierballen' genoemd. De Engelse term dumbbell curls wordt veelvuldig en wereldwijd gebruikt in de krachtsportwereld. Het woord curls betekent in het Engels: krullen. De oefening is een soort krullende beweging waardoor deze term is ontstaan. De oefening wordt ook vaak als \"dumbell curls\" geschreven, met een letter minder.", "https://www.pinclipart.com/picdir/middle/413-4137921_biceps-drawing-mans-arm-dumbbell-curl-png-clipart.png");
+        Oefening o3 = new Oefening("bicep-curl", 10, 75, "bicep", "Dumbbell curls is een oefening die vaak door krachtsporters zoals bij bodybuilding, powerlifting," +
+                " krachttraining, fitness en andere sporten wordt gebruikt ter versterking of vergroting van vooral de biceps (musculus biceps brachii)." +
+                " Deze spiergroep wordt in de volksmond ook wel 'spierbal' of 'spierballen' genoemd. De Engelse term dumbbell curls wordt veelvuldig en " +
+                "wereldwijd gebruikt in de krachtsportwereld. Het woord curls betekent in het Engels: krullen. De oefening is een soort krullende beweging " +
+                "waardoor deze term is ontstaan. De oefening wordt ook vaak als \"dumbell curls\" geschreven, met een letter minder.", "https://www.pinclipart.com/picdir/middle/413-4137921_biceps-drawing-mans-arm-dumbbell-curl-png-clipart.png");
         oefeningen.add(o3);
         Oefening o4 = new Oefening("rope-pulldown", 10, 25, "tricep", "Stel de pulley in op de hoogste stand en bevestig het touw of de stang aan de pulley.\n" +
                 "Pak het touw met overhandse grip vast, dus met je handpalmen naar beneden gericht.\n" +

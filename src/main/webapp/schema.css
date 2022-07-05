@@ -180,9 +180,14 @@ h3 {
 
 }
 
+
+
 button {
-    width: 350px;
+
+    alignment: top;
+    width: 500px;
     text-align: center;
+    align-items: center;
 }
 
 p {
@@ -255,6 +260,8 @@ h6 {
 }
 
 .specifiek {
+
+
     font-size: 20px;
 }
 

@@ -53,11 +53,7 @@
 }
 
 
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 60px;
-}
+
 
 .artikel {
     border-style: dashed;
@@ -99,7 +95,7 @@ ul {
     padding: 20px 20px;
     border-style: solid;
     background-color: white;
-    opacity: 70%;
+    opacity: 80%;
     border-radius: 35px;
 
 }
@@ -107,6 +103,16 @@ ul {
 body {
     background-image: url("https://wallpaper.dog/large/20502789.jpg");
     position: relative;
+}
+
+
+p {
+    font-weight: bold;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
 }
 
 h3 {
@@ -117,31 +123,23 @@ h3 {
     top: -20px;
 }
 
-p {
+/*titel*/
+h2{
     font-weight: bold;
-}
-
-h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
 }
 
-h5 {
-    font-size: 25px;
-    color: red;
-    position: relative;
-    text-align: center;
-    top: -20px;
 
-}
 
-h8 {
-    font-size: 20px;
-    font-family: Arial, monospace;
 
-}
+
+
+
 .test{
     color: white;
 }
-
+#witruimte{
+    background-color: red;
+}
 

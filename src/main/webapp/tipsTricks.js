@@ -47,7 +47,7 @@ geefTipsTricksInformatieWeer()
 function verwijderTips(event, tip){
     event.preventDefault()
     let data = {tipnaam: tip}
-    return fetch(url + "restservices/tipsTricks/tip", {
+    return fetch(url + "restservices/tipsTricks/", {
         method: 'DELETE',
         body: JSON.stringify(data),
         headers: {

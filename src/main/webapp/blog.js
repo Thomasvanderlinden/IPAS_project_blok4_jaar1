@@ -4,7 +4,7 @@ let formulier = document.querySelector('#artikelForumuler')
 
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 
 
 function convert(array) {
@@ -45,9 +45,7 @@ function geefBlogInfoWeer() {
 geefBlogInfoWeer()
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//formulier gedeelte
-
+//formulier
 function loginMetFormulier() {
     if (window.sessionStorage.getItem("myJWT")) {
         document.forms.artikelForumuler.style = "display:block";

@@ -9,10 +9,10 @@ let knopFavorieten = document.getElementById('favorieten')
 
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 
 
-//deze is hoort bij de favorietenknop
+//hoort bij de favorietenknop
 function vraagOefeningenOp(oefening) {
     return fetch(url + 'restservices/oefeningen/' + oefening)
         .then(function (data) {
@@ -80,6 +80,8 @@ function verstuurKnopDingen(event, x) {
     }).then(response => response.json())
         .catch(error => alert("oefening staat al in je favorieten"))
 }
+
+
 //deze zorgt voor het gele sterretje, dus hier staat de knop die de favorieten toevoegd
 function vraagAllesOp() {
     vraagOefeningenOp("").then(oefeningen => {

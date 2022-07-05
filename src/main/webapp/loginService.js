@@ -1,6 +1,6 @@
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = localhost
+let url = heroku
 export default class LoginService {
     token = '...'
 
@@ -12,7 +12,6 @@ export default class LoginService {
     login(username, password) {
         let bodyCredentials = {username, password}
 
-        //zodat als er niks ingevuld wordt er geen onnodige post gedaan hoeft te worden:
         if (username === "" || password === "") {
             return alert("je hebt geen inloggegevens ingevuld")
         }

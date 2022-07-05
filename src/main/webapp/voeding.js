@@ -77,7 +77,7 @@ function geefGerechtInformatieWeer(gerecht) {
 
 function vraagGerechtInformatieOp(event, naam) {
     event.preventDefault()
-    return fetch('http://localhost:8080/restservices/voeding/' + naam)
+    return fetch(url + 'restservices/voeding/' + naam)
         .then(r => {
             return r.json()
         })

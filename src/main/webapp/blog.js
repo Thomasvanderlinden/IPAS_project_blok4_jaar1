@@ -11,7 +11,7 @@ function convert(array) {
     let list = document.createElement('div');
     for (let i of array) {
         let item = document.createElement('span');
-        item.innerHTML = `<h2>${i.naam}</h2>  <h3>${i.onderwerp}</h3>  <p>${i.tekst}</p> <button onclick="verwijderArtikel(event, '${i.naam}')">verwijder</button><br><div id="witruimte" style="height: 5px"  ></div><br>`;
+        item.innerHTML = `<h2>${i.naam}</h2>  <h3>${i.onderwerp}</h3>  <p>${i.tekst}</p> <button class="verijderKnop" onclick="verwijderArtikel(event, '${i.naam}')">verwijder</button><br><div id="witruimte" style="height: 5px"  ></div><br>`;
         list.appendChild(item)
     }
     return list;

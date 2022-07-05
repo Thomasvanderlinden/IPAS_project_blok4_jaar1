@@ -192,7 +192,6 @@ public class StartupListener implements ServletContextListener {
         tricepLijst.add(o4);
 
 
-        favorietenLijst.add(o1);
 
         //extra
 

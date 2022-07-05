@@ -3,7 +3,7 @@ let knop = document.getElementById('opsturenBlog')
 let formulier = document.querySelector('#artikelForumuler')
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = heroku
+let url = localhost
 
 
 function loginMetFormulier() {

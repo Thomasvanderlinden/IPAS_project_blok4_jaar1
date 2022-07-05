@@ -1,6 +1,6 @@
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = heroku
+let url = localhost
 export default class LoginService {
 
 

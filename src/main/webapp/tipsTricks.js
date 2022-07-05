@@ -3,7 +3,7 @@ let knop = document.getElementById('opsturenTip')
 let formulier = document.querySelector('#tipFormulier')
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = heroku
+let url = localhost
 
 function loginMetFormulier() {
     if (window.sessionStorage.getItem("myJWT")) {
@@ -35,13 +35,14 @@ function geefTipsTricksInformatieWeer() {
                                    <h3>${t.onderwerp}</h3>
                                    <p>${t.tekstVanDeTip}</p>
                                    <h4>${t.auteur}</h4> 
-                                   <button class="verwijderTip" onclick="verwijderTips(event, '${t.tipnaam}')">verwijder tip</button>
+                                   <button id="verwijder" class="verwijderTip" onclick="verwijderTips(event, '${t.tipnaam}')">verwijder tip</button>
                               </div>`
         }
     })
 }
 
 geefTipsTricksInformatieWeer()
+
 
 
 function verwijderTips(event, tip){
@@ -53,7 +54,9 @@ function verwijderTips(event, tip){
         headers: {
             'Content-Type' : 'application/json', "Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")
         }
-    }).then(geefTipsTricksInformatieWeer)
+    }).then(resp => {return resp.json()})
+        .catch(error => alert("je bent niet ingelogd, dus dit is niet toegestaan")).then(geefTipsTricksInformatieWeer)
+
 }
 
 

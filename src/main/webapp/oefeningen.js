@@ -10,7 +10,7 @@ let knopFavorieten = document.getElementById('favorieten')
 
 let heroku = "https://ipasproject.herokuapp.com/"
 let localhost = 'http://localhost:8080/';
-let url = heroku
+let url = localhost
 
 //todo: misschien ook de knoppen in de filters, maar daar moet je nog ff over nadenken:
 
@@ -37,14 +37,6 @@ function fietsHetErin(oefening) {
                                    </p>
                               </div>`
 }
-
-// private String naam;
-// private int tijd;
-// private int verbrande_kcal;
-// private String spiergroep;
-// private String omschrijving;
-// private String plaatje;
-
 
 
 function vraagOefeningInformatieOp(event, oefening) {
@@ -84,8 +76,10 @@ function verstuurKnopDingen(event, x) {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    }).then(response => response.json())
+        .catch(error => alert("oefening staat al in je favorieten"))
 }
+
 
 function vraagAllesOp() {
     vraagOefeningenOp("").then(oefeningen => {
@@ -104,8 +98,6 @@ function vraagAllesOp() {
 }
 
 vraagAllesOp()
-
-
 
 
 knopBorst.addEventListener('click', e => {
@@ -161,7 +153,8 @@ function verwijderOefening(event, oefening) {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(verversPagina)
+    }).catch(error => alert("er is iets fout gegaan"))
+        .then(verversPagina)
 
 
 }
